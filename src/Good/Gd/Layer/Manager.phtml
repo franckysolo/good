@@ -1,0 +1,16 @@
+
+<div id="layerManager">
+	<h3>Gestionnaire de claques</h3>
+	<?php foreach($this->getLayers() as $key => $layer):?>
+	<ul>
+		<li>Calque n°<?php echo $key + 1;?></li>		
+		<li>Nom du calque : <?php echo $layer->getName()?></li>
+		<li>Transparence : <?php echo $layer->getTransparence()?></li>
+		<?php if($layer->hasFilter()):?>
+		<?php foreach($layer->getFilters() as $name => $filter):?>
+				<li>Filtre <?php echo $filter->getName();?></li>			
+		<?php endforeach;?>
+		<?php endif;?>
+	</ul>
+	<?php endforeach;?>	
+</div>
