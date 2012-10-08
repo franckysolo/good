@@ -110,7 +110,7 @@ class SimpleDrawingCase extends  UnitCase
 		// add html attributes for view render
 		$image->setHtmlAttribute('figcaption', "Dessin de formes basique");
 
-		$image->save('pattern', Codec::PNG);
+		$image->save('../tmp/pattern', Codec::PNG);
 		View::newInstance()->render($image);
 
 		$this->assert("Dessin de formes basique sur le claque principale", $image instanceof Image);

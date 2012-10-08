@@ -47,7 +47,7 @@ class DashedLineDrawingCase extends  UnitCase
 		// add html attributes for view render
 		$image->setHtmlAttribute('figcaption', "Dessin d'une ligne pointillée");
 
-		$image->save('dashedLine');
+		$image->save('../tmp/dashedLine');
 		View::newInstance()->render($image);
 
 		$this->assert("Dessin d'une ligne pointillée", is_resource($resource));

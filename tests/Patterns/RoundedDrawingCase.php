@@ -33,7 +33,7 @@ class RoundedDrawingCase extends  UnitCase
 		// add html attributes for view render
 		$image->setHtmlAttribute('figcaption', "Dessin d'un rounded rectangle");
 
-		$image->save('rounded-rect');
+		$image->save('../tmp/rounded-rect');
 		View::newInstance()->render($image);
 
 		$this->assert("Dessin d'un rounded rectangle", $image instanceof Image);

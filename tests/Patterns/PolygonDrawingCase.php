@@ -40,7 +40,7 @@ class PolygonDrawingCase extends  UnitCase
 		// add html attributes for view render
 		$image->setHtmlAttribute('figcaption', "Dessin de polygones");
 
-		$image->save('polygon');
+		$image->save('../tmp/polygon');
 		View::newInstance()->render($image);
 
 		$this->assert("dessin d'un polygone orange et blue sur le claque principale", $image instanceof Image);

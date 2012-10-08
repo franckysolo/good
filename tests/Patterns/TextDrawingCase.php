@@ -45,7 +45,7 @@ class TextDrawingCase extends  UnitCase
 		// add html attributes for view render
 		$image->setHtmlAttribute('figcaption', "Dessin d'un texte");
 
-		$image->save('text');
+		$image->save('../tmp/text');
 		View::newInstance()->render($image);
 
 		$this->assert("dessin d'un text", is_resource($resource));
