@@ -1,7 +1,7 @@
 <?php
 namespace Good\Gd;
 use Good\Gd\Color\Palette;
-use Good\Core\Drawable;
+use Good\Core\Interfaces\Drawable;
 /**
  *  Good 1.0
  *
