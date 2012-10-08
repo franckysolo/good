@@ -1,0 +1,191 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #000;
+	color: #033;
+}
+
+h1 {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	padding: 5px;
+	position: relative;
+	color: #006;
+	text-align: center;
+	font-size: xx-large;
+}
+
+h2 {
+	background: #000 url("../images/hide.png") no-repeat 2px center;
+	padding: 5px;
+	color: #eee;
+	text-indent: 25px;
+	cursor: pointer;
+}
+
+h3 {
+	padding: 5px;
+	color: #033;
+}
+
+ol,h4 {
+	margin: 10px;
+}
+
+h4 {
+	margin-bottom: 0;
+	display: block;
+	background-color: #222;
+	color: #eee;
+	padding: 1%;
+	text-align: right;
+	cursor: pointer;
+	border-radius: 4px 4px 0px 0px;
+}
+
+ol {
+	margin-top: 0;
+	list-style-position: inside;
+}
+
+article {
+	background-color: #fff;
+	margin: 20px;
+	border: 1px solid #eee;
+	border-radius: 4px;
+	box-shadow: 1px 2px 2px #fff;
+}
+
+section {
+	overflow: hidden;
+}
+
+.object {
+	text-align: center;
+	font-size: x-large;
+	display: block;
+}
+
+#report {
+	width: 98%;
+	margin: auto;
+	background-color: #222;
+	position: relative;
+}
+
+#report ul {
+	background-color: #000;
+	border-radius: 4px;
+	box-shadow: 1px 2px 2px #eee;
+	color: #eee;
+	position: absolute;
+	right: 5px;
+	top: 10px;
+	padding: 5px;
+}
+
+#report ul li {
+	margin: 5px;
+	list-style-type: none;
+	font-weight: bold;
+}
+
+#report li span {
+	font-weight: normal;
+	font-style: italic;
+}
+
+#report textarea {
+	width: 100%;
+}
+
+.assertion {
+	padding: 10px;
+	width: 80%;
+	margin: auto;
+}
+
+.box {
+	border: 1px solid #ccc;
+	padding: 1%;
+	color: #222;
+}
+
+.box.failure {
+	background-color: rgba(240, 80, 80, .2);
+}
+
+.box.success {
+	background-color: rgba(124, 255, 124, .2);
+}
+
+.box.failure {
+	border: red 1px solid;
+}
+
+.box.success {
+	border: green 1px solid;
+}
+
+.status.failure {
+	color: red;
+}
+
+.status.success {
+	color: green;
+}
+
+.result {
+	display: inline-table;
+	width: 22px;
+	height: 22px;
+	vertical-align: middle;
+}
+
+.result.failure {
+	background: url("../images/failure.png") no-repeat;
+}
+
+.result.success {
+	background: url("../images/success.png") no-repeat;
+}
+
+.file,.line,.status,.label {
+	font-style: italic;
+}
+
+.label {
+	color: #300;
+}
+
+.file {
+	color: #600;
+}
+
+.line {
+	color: #f00;
+}
+
+.status {
+	color: #eee;
+	padding: 1%;
+}
+
+#layerManager {
+	background-color: blue;
+	color: white;
+	height: 100%;
+	width: 250px;
+	position : fixed;
+	left : 0;
+	top : 0;
+}
+
+#layerManager ul {
+	position: relative;
+	display: block;
+	margin: 1%;
+}
