@@ -2,6 +2,8 @@
 namespace tests\Patterns;
 
 
+use Good\Core\View;
+
 use Good\Gd\Pattern\DashedRectangle;
 
 use Good\Gd\Pattern\Arc;
@@ -46,7 +48,7 @@ class DashedLineDrawingCase extends  UnitCase
 		$image->setHtmlAttribute('figcaption', "Dessin d'une ligne pointillée");
 
 		$image->save('dashedLine');
-		$image->render();
+		View::newInstance()->render($image);
 
 		$this->assert("Dessin d'une ligne pointillée", is_resource($resource));
 	}

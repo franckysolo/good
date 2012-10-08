@@ -1,6 +1,8 @@
 <?php
 namespace tests\Patterns;
 
+use Good\Core\View;
+
 use Good\Gd\Pattern\RoundedRectangle;
 use Good\Gd\Pattern\RoundedFilledRectangle;
 
@@ -32,7 +34,7 @@ class RoundedDrawingCase extends  UnitCase
 		$image->setHtmlAttribute('figcaption', "Dessin d'un rounded rectangle");
 
 		$image->save('rounded-rect');
-		$image->render();
+		View::newInstance()->render($image);
 
 		$this->assert("Dessin d'un rounded rectangle", $image instanceof Image);
 	}

@@ -1,8 +1,10 @@
 <?php
 namespace tests\Patterns;
 
+use Good\Core\View;
+
 use Good\Gd\Image;
-use Good\Gd\Palette;
+use Good\Gd\Color\Palette;
 use Good\Gd\Pattern\Polygon;
 use Good\Gd\Pattern\FilledPolygon;
 
@@ -39,7 +41,7 @@ class PolygonDrawingCase extends  UnitCase
 		$image->setHtmlAttribute('figcaption', "Dessin de polygones");
 
 		$image->save('polygon');
-		$image->render();
+		View::newInstance()->render($image);
 
 		$this->assert("dessin d'un polygone orange et blue sur le claque principale", $image instanceof Image);
 	}

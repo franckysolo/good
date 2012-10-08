@@ -1,5 +1,7 @@
 <?php
-namespace tests\Gd\Patterns;
+namespace tests\Patterns;
+
+use Good\Core\View;
 
 use Good\Gd\Gradient\Diagonal;
 use Good\Gd\Gradient\Radial;
@@ -109,7 +111,7 @@ class SimpleDrawingCase extends  UnitCase
 		$image->setHtmlAttribute('figcaption', "Dessin de formes basique");
 
 		$image->save('pattern', Codec::PNG);
-		$image->render();
+		View::newInstance()->render($image);
 
 		$this->assert("Dessin de formes basique sur le claque principale", $image instanceof Image);
 	}

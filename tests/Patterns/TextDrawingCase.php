@@ -1,8 +1,10 @@
 <?php
-namespace tests\Gd\Patterns;
+namespace tests\Patterns;
+
+use Good\Core\View;
 
 use Good\Gd\Image;
-use Good\Gd\Color;
+use Good\Gd\Color\Palette;
 use Good\Gd\Pattern\Text;
 
 use Good\UnitTest\UnitCase;
@@ -44,7 +46,7 @@ class TextDrawingCase extends  UnitCase
 		$image->setHtmlAttribute('figcaption', "Dessin d'un texte");
 
 		$image->save('text');
-		$image->render();
+		View::newInstance()->render($image);
 
 		$this->assert("dessin d'un text", is_resource($resource));
 	}
