@@ -50,7 +50,7 @@ class MergeCase extends  UnitCase
 		$layer2 = $icon->addLayer('layer-2', $layer1);
 		$layer2->setTransparence(20);
 			
-		$icon->save('merge-icon', Codec::PNG);
+		$icon->save('../tmp/merge-icon', Codec::PNG);
 		$icon->setHtmlAttribute('figcaption', 'merge images with different size');
 		$icon->render();
 		

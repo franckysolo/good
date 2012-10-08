@@ -29,7 +29,7 @@ class ThumbnailCase extends  UnitCase
 		$layer = $thumb->execute();
 		$image->setLayer($layer, 0);
 		
-		$image->save('miniature', Codec::JPEG);
+		$image->save('../tmp/miniature', Codec::JPEG);
 		$image->setHtmlAttribute('figcaption', 'miniature');
 		$image->render();
 		

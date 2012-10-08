@@ -29,7 +29,7 @@ class CropCase extends  UnitCase
 		$layer = $crop->execute();
 		$image->setLayer($layer, 0);
 		
-		$image->save('crop', Codec::PNG);
+		$image->save('../tmp/crop', Codec::PNG);
 		$image->setHtmlAttribute('figcaption', 'crop');
 		$image->render();
 		

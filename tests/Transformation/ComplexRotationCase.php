@@ -73,7 +73,7 @@ class ComplexRotationCase extends  UnitCase
 		
 		$this->assert("Rotation de 45° du rectangle", $pattern instanceof Pattern);
 		
- 		$image->save('rotation-complex')
+ 		$image->save('../tmp/rotation-complex')
  			  ->render();
  		$this->assert("Sauvegarde et affichage", $pattern instanceof Pattern);
 	}

@@ -39,7 +39,7 @@ class SimpleRotationCase extends  UnitCase
 		
 		$this->assert("Dessin d'un rectange orange et bleue sur le même calque", $pattern instanceof Pattern);
 		
-		$image->save('rotation-simple-in')
+		$image->save('../tmp/rotation-simple-in')
 			  ->render();
 		
 		$rotation = new Rotation($layer->getResource());
