@@ -1,13 +1,15 @@
 <?php
 namespace tests\Color;
 
+use Good\Core\View;
+
 use Good\Gd\Color\Palette;
 
 use Good\Gd\Color;
 use Good\Gd\Image;
 use Good\Gd\Pattern\FilledRectangle;
 
-use Phpmedias\UnitTest\UnitCase;
+use Good\UnitTest\UnitCase;
 
 
 class ColorCase extends  UnitCase
@@ -38,7 +40,7 @@ class ColorCase extends  UnitCase
 		$rect->draw();
 		
 		$image->save('color');
-		$image->render();
+		View::newInstance()->render($image);
 		
 		$this->assert('Test sur les couleurs', $color instanceof Color);
 	}
