@@ -1,0 +1,35 @@
+			<h2>
+				<?php echo $this->escape($this->getTitle());?>
+				<span class="result <?php echo $str = ($this->getStatus()) ? 'success' : 'failure';?>"><?php //echo $str?></span>				
+			</h2>
+			
+			<div class="assertion <?php echo $str; ?>">
+				<h3>Nom de la classe</h3>
+				<em class="object"><?php echo $this->getName();?></em>
+				
+				<h3>Debug</h3>
+				<div class="box">
+					<ol>
+					<?php foreach ($this->getDumpVars() as $vars):?>
+						<li><?php var_dump($vars) ;?></li>				
+					<?php endforeach;?>
+					</ol>
+				</div>
+								
+				<h3>Sortie</h3>
+				<div class="box">
+					<?php echo $this->getOutput();?>
+				</div>
+				
+				<h3>Assertions</h3>				
+				<?php foreach($this->getAssertions() as $key => $assertion):?>
+				<h4 class="toggle">Assertion n° <?php echo ($key + 1);?></h4>
+				<?php $this->renderChild($assertion);?>
+				<?php endforeach;?>
+				
+				<h3>Exception</h3>
+				<pre>
+					<?php var_dump($this->getException());?>
+				</pre>
+			</div>
+		</div>

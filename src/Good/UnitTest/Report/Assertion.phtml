@@ -1,0 +1,7 @@
+	<ol class="box <?php echo $status = ($this->getStatus()) ? 'success' : 'failure';?>">
+    	<li>Assertion : <span class="label"><?php echo $this->escape($this->getLabel()) ?></span></li>
+    	<li>Fichier : <span class="file"><?php echo $this->escape($this->getFilename()); ?></span></li>
+    	<li>Ligne : <span class="line"><?php echo $this->escape($this->getLine()); ?></span></li>    	
+    	<li>Status : <span class="status <?php echo $status;?>"><?php echo $status;?></span></li>
+    	<li>Exécution : <span class="timer"><?php echo round($this->getTimestamp(), 6); ?> ms</span></li>
+    </ol>

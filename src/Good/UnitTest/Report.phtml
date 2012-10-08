@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link href="../public/css/report.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js"></script>
+		<script type="text/javascript" src="../public/js/mootools-more.js"></script>
+		<script type="text/javascript" src="../public/js/script.js"></script>
+		
+		<title>Good - Interface de Test</title>
+	</head>
+	<body>
+		<section id="report">
+			<h1>Gif oriented object drawing - Interface de Test</h1>
+			
+			<div id="accordion">
+			<?php foreach($this->getCaseResult() as $caseResult):?>
+				<article>
+					<?php $this->renderChild($caseResult);?>
+				</article>
+			<?php endforeach;?>
+			<ul>
+				<li>Nombres de test : <span><?php echo $t = $this->escape($this->getTotalCount());?></span></li>
+				<li>Succés : <span class="status success"><?php echo $s = $this->escape($this->getSuccessCount());?></span></li>
+				<li>Echecs : <span class="status failure"><?php echo ($t - $s);?></span></li>			
+				<li>Temps d'exécution : <span><?php echo round(xdebug_time_index(), 6);?> s</span></li>
+ 				<li>Memoire utilisé : <span class="timer"><?php echo xdebug_memory_usage() / 1000; ?> kb</span></li>
+				<li>Memoire max alloué : <span class="timer"><?php echo xdebug_peak_memory_usage() / 1000;?> kb</span></li>		
+			</ul>
+			</div>
+		</section>
+	</body>
+</html>
