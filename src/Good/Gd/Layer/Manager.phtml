@@ -14,3 +14,21 @@
 	</ul>
 	<?php endforeach;?>	
 </div>
+
+<script type="text/javascript">
+var div = window.document.getElementById('layerManager');
+div.style.backgroundColor = 'blue';
+div.style.color= 'white';
+div.style.height= '100%';
+div.style.width= '250px';
+div.style.position = 'fixed';
+div.style.left = 0;
+div.style.top = 0;
+var ul = div.getElementByTagsName('ul');
+for(var i in ul) {
+	var list = ul[i];
+	list.style.position = 'relative';
+	list.style.display = 'block';
+	list.style.margin = '1%';
+}
+</script>
