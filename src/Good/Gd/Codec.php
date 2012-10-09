@@ -80,8 +80,7 @@ abstract class Codec
 	public static function findNamespace($name)
 	{
 		if(preg_match('/image\//', $name)) {
-			//@FIXME bug
-			return ucfirst(ltrim($name, 'image/'));
+			return ucfirst(substr($name, 6));
 		}
 		 
 		return  ucfirst($name);
