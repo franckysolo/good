@@ -1,5 +1,5 @@
 {
-	"name": "good",
+	"name": "franckysolo/good",
     "type": "library",
     "description": "Good - The Gif oriented object drawing PHP framework",
     "keywords": ["framework", "drawing", "image"],
