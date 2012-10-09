@@ -1,0 +1,21 @@
+{
+	"name": "good/good",
+    "type": "library",
+    "description": "Good - The Gif oriented object drawing PHP framework",
+    "keywords": ["framework", "drawing", "image"],
+    "homepage": "http://good.franckysolo-production.com/",
+    "license": "",
+    "authors": [
+        {
+            "name": "Franck MATHERAT",
+            "email": "franckysolo@gmail.com",
+            "homepage": "http://franckysolo-productions.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+    },
+    "autoload": {
+        "psr-0": { "Good": "src/" }
+    }
+}
