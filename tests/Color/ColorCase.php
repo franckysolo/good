@@ -39,7 +39,7 @@ class ColorCase extends  UnitCase
 		$rect->setCoordinates(20, 20, 30, 30);
 		$rect->draw();
 		
-		$image->save('color');
+		$image->save('../tmp/color');
 		View::newInstance()->render($image);
 		
 		$this->assert('Test sur les couleurs', $color instanceof Color);
