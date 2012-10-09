@@ -250,12 +250,22 @@ class Image
 		$this->setHtmlAttribute('src', $filename);	
 		
 		if($this->_layerList->count() > 1){
+			
 			$merge = new Merge($this->getLayer(0)->getResource());
 			$merge->addLayerList($this->_layerList);
 			$layer = $merge->execute();
 			$resource = $layer->getResource();		
+			
 		} else { 
-			$resource = $this->getLayer(0)->getResource();
+			
+			$layer = $this->getLayer(0);
+			if($layer->hasFilter()) {
+				foreach($layer->getFilters() as $filter) {
+					$filter->apply($layer->getResource());
+				}
+			}
+			
+			$resource = $layer->getResource();
 		}
 
 		$codec->encode($resource, $filename);
