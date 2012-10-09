@@ -42,75 +42,69 @@ class SimpleDrawingCase extends  UnitCase
 		$resource = $layer1->getResource();
 		$this->dump($resource);
 				
-// 		// drawing a rectangle pattern
-// 		$pattern = new FilledRectangle($resource);
-// 		$pattern->setCoordinates(10, 10, 70, 50)
-// 				//->setColor()
-// 				->draw();
-		
-// 		$gradient = new Linear($pattern, Gradient::VERTICAL);
-// 		$gradient->setColors(array(Palette::RED, Palette::GREEN));
-// 		$gradient->apply();
-		
+		// drawing a rectangle pattern
+		$pattern = new FilledRectangle($resource);
+		$pattern->setCoordinates(10, 10, 70, 50)
+				->setColor(Palette::ORANGE)
+				->draw();
+	
 		// drawing some random pixel on the same layer
-// 		$pattern = new Pixel($resource);
-// 		for($i = 0; $i < 500; $i++) {		
-// 			$x = mt_rand(1, 199);
-// 			$y = mt_rand(1, 199);
-// 			$r = mt_rand(0, 255);
-// 			$g = mt_rand(0, 255);
-// 			$b = mt_rand(0, 255);
-// 			$pattern->setCoordinates($x, $y)
-// 					->setColor(array($r, $g, $b))
-// 					->draw();
-// 		}
+		$pattern = new Pixel($resource);
+		for($i = 0; $i < 500; $i++) {		
+			$x = mt_rand(1, 199);
+			$y = mt_rand(1, 199);
+			$r = mt_rand(0, 255);
+			$g = mt_rand(0, 255);
+			$b = mt_rand(0, 255);
+			$pattern->setCoordinates($x, $y)
+					->setColor(array($r, $g, $b))
+					->draw();
+		}
 		
-// 		//	drawing axis lines		
-// 		$axis = new Line($resource);
-// 		$axis->setCoordinates(0, 100, 200, 100)
-// 				->draw();
-// 		$axis->setCoordinates(100, 0, 100, 200)
-// 				->draw();
+		//	drawing axis lines		
+		$axis = new Line($resource);
+		$axis->setCoordinates(0, 100, 200, 100)
+				->draw();
+		$axis->setCoordinates(100, 0, 100, 200)
+				->draw();
 		
-// 		// a rectangle
-// 		$rect = new Rectangle($resource);
-// 		$rect->setCoordinates(0, 60, 80, 80)
-// 			 ->setColor(Palette::RED)
-// 			 ->draw();
+		// a rectangle
+		$rect = new Rectangle($resource);
+		$rect->setCoordinates(0, 60, 80, 80)
+			 ->setColor(Palette::RED)
+			 ->draw();
 		
-// 		// a ellipse
-// 		$ellipse = new Ellipse($resource);
-// 		$ellipse->setCoordinates(100, 100, 80, 60)
-// 			 	->setColor(Palette::RED)
-// 			 	->draw();
+		// a ellipse
+		$ellipse = new Ellipse($resource);
+		$ellipse->setCoordinates(100, 100, 80, 60)
+			 	->setColor(Palette::RED)
+			 	->draw();
 		
 		// a filled ellipse
 		$ellipse = new FilledEllipse($resource);
 		$gradient = new Radial($ellipse);
 		$gradient->setColors(array(Palette::RED, Palette::GREEN));
 		
-		$ellipse->setCoordinates(80, 80, 100, 120)
-			 	->setGradient($gradient)
+		$ellipse->setCoordinates(30, 100, 30, 20)
+			 	->setColor(Palette::MAROON)
 			 	->draw();
-		
-		
-		
+			
 		// an arc 
-// 		$arc = new Arc($resource);
-// 		$arc->setCoordinates(150, 150, 80, 60, 0, 180)
-// 			->draw();
+		$arc = new Arc($resource);
+		$arc->setCoordinates(150, 150, 80, 60, 0, 180)
+			->draw();
 		
-// 		// a filled arc
-// 		$arc = new FilledArc($resource);
-// 		$arc->setCoordinates(100, 100, 60, 60, 0, 300)
-// 			->setColor(Palette::BLUE)
-// 			->setStyle(FilledArc::EDGED)
-// 			->draw();
+		// a filled arc
+		$arc = new FilledArc($resource);
+		$arc->setCoordinates(100, 100, 60, 60, 0, 300)
+			->setColor(Palette::BLUE)
+			->setStyle(FilledArc::EDGED)
+			->draw();
 		
 		// add html attributes for view render
 		$image->setHtmlAttribute('figcaption', "Dessin de formes basique");
 
-		$image->save('../tmp/pattern', Codec::PNG);
+		$image->save('pattern', Codec::PNG);
 		View::newInstance()->render($image);
 
 		$this->assert("Dessin de formes basique sur le claque principale", $image instanceof Image);
