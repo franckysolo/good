@@ -1,5 +1,7 @@
 <?php
-namespace tests\Gd\Transformation;
+namespace tests\Transformation;
+
+use Good\Core\View;
 
 use Good\Gd\Layer;
 use Good\Gd\Pattern;
@@ -73,8 +75,8 @@ class ComplexRotationCase extends  UnitCase
 		
 		$this->assert("Rotation de 45° du rectangle", $pattern instanceof Pattern);
 		
- 		$image->save('../tmp/rotation-complex')
- 			  ->render();
+ 		$image->save('../tmp/rotation-complex');
+ 		View::newInstance()->render($image);
  		$this->assert("Sauvegarde et affichage", $pattern instanceof Pattern);
 	}
 }

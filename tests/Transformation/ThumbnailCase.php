@@ -1,5 +1,7 @@
 <?php
-namespace tests\Gd\Transformation;
+namespace tests\Transformation;
+
+use Good\Core\View;
 
 use Good\Gd\Transformation\Thumbnail;
 use Good\Gd\Codec;
@@ -17,10 +19,10 @@ class ThumbnailCase extends  UnitCase
 	{
 		$this->setTitle("Création d'une miniature");
 
-		$image = Image::import('../public/images/image1.jpg');				
+		$image = Image::import('../public/images/image.jpg');				
 		$image->save($image->getLayer()->getName(), Codec::JPEG);
 		$image->setHtmlAttribute('figcaption', 'original');
-		$image->render();
+		View::newInstance()->render($image);
 		
 		$thumb = new Thumbnail($image->getLayer()->getResource());
 		$this->dump($thumb);
@@ -31,7 +33,7 @@ class ThumbnailCase extends  UnitCase
 		
 		$image->save('../tmp/miniature', Codec::JPEG);
 		$image->setHtmlAttribute('figcaption', 'miniature');
-		$image->render();
+		View::newInstance()->render($image);
 		
 		$this->assert("Import d'une image jpeg ,sauvegarde d'une copie, création d'une miniature et affichage", $image instanceof Image);
 	}

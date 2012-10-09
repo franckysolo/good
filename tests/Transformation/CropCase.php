@@ -1,5 +1,7 @@
 <?php
-namespace tests\Gd\Transformation;
+namespace tests\Transformation;
+
+use Good\Core\View;
 
 use Good\Gd\Transformation\Crop;
 use Good\Gd\Transformation\Thumbnail;
@@ -18,10 +20,10 @@ class CropCase extends  UnitCase
 	{
 		$this->setTitle("Recadrage d'un calque");
 
-		$image = Image::import('../public/images/image2.png');				
+		$image = Image::import('../public/images/image.png');				
 		$image->save($image->getLayer()->getName());
 		$image->setHtmlAttribute('figcaption', 'original');
-		$image->render();
+		View::newInstance()->render($image);
 		
 		$crop = new Crop($image->getLayer(0)->getResource());
 		$crop->setPosition(75, 50);
@@ -31,7 +33,7 @@ class CropCase extends  UnitCase
 		
 		$image->save('../tmp/crop', Codec::PNG);
 		$image->setHtmlAttribute('figcaption', 'crop');
-		$image->render();
+		View::newInstance()->render($image);
 		
 		$this->assert("Import d'une image jpeg ,sauvegarde d'une copie, recadrage de l'image et affichage", $image instanceof Image);
 	}

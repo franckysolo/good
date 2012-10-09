@@ -1,5 +1,7 @@
 <?php
-namespace tests\Gd\Transformation;
+namespace tests\Transformation;
+
+use Good\Core\View;
 
 use Good\Gd\Layer;
 use Good\Gd\Pattern;
@@ -39,8 +41,8 @@ class SimpleRotationCase extends  UnitCase
 		
 		$this->assert("Dessin d'un rectange orange et bleue sur le même calque", $pattern instanceof Pattern);
 		
-		$image->save('../tmp/rotation-simple-in')
-			  ->render();
+		$image->save('../tmp/rotation-simple-in');
+		View::newInstance()->render($image);
 		
 		$rotation = new Rotation($layer->getResource());
 		$rotation->setAngle(30);
@@ -48,8 +50,8 @@ class SimpleRotationCase extends  UnitCase
 		
 		$this->assert("Rotation de 45° du calque principal", $pattern instanceof Pattern);
 		
- 		$image->save('rotation-simple')
- 			  ->render();
+ 		$image->save('../tmp/rotation-simple');
+ 		View::newInstance()->render($image);
  		$this->assert("Sauvegarde et affichage", $pattern instanceof Pattern);
 	}
 }

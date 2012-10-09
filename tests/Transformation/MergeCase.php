@@ -1,5 +1,5 @@
 <?php
-namespace tests\Gd\Transformation;
+namespace tests\Transformation;
 
 use Good\Gd\Transformation\Merge;
 

@@ -1,5 +1,7 @@
 <?php
-namespace tests\Gd\Transformation;
+namespace tests\Transformation;
+
+use Good\Core\View;
 
 use Good\Gd\Codec;
 
@@ -57,8 +59,8 @@ class RotationCase extends  UnitCase
 		
 		$this->assert("Rotation de 45° du rectangle bleue", $pattern instanceof Pattern);
 		
- 		$image->save('../tmp/rotation')
- 			  ->render();
+ 		$image->save('../tmp/rotation');
+ 		View::newInstance()->render($image);
  		$this->assert("Sauvegarde et affichage", $pattern instanceof Pattern);
 	}
 }
