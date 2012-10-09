@@ -17,4 +17,4 @@ Requirements
 Quickstart & Documentation
 --------------------------
 
-	* [Visite the web site](http://www.good.franckysolo-production.com)
+* [Visite the web site](http://www.good.franckysolo-production.com)
