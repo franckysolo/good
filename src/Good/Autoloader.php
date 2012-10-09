@@ -57,7 +57,9 @@ class Autoloader
 		$rootDirectory 	= realpath(__DIR__ . DIRECTORY_SEPARATOR . '..');
 		$srcDirectory 	= dirname($rootDirectory);
 		$testDirectory 	= $srcDirectory . DIRECTORY_SEPARATOR . 'tests';
-		$include_path 	= array($rootDirectory, $testDirectory, $srcDirectory);		
+		$fontDirectory 	= $srcDirectory . DIRECTORY_SEPARATOR . 'public/fonts';
+		
+		$include_path 	= array($rootDirectory, $testDirectory, $srcDirectory, $fontDirectory);		
 		$include_path 	= get_include_path() . PATH_SEPARATOR . implode(PATH_SEPARATOR, $include_path);		
 		set_include_path($include_path);
 	}
