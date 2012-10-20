@@ -1,4 +1,9 @@
 <?php
+/**
+ * Good 1.0 (Gif oriented object drawing)
+ *
+ * @author franckysolo
+ */
 namespace Good\Gd;
 use Good\Gd\Color\Palette;
 use Good\Core\Interfaces\Drawable;

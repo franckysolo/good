@@ -1,4 +1,9 @@
 <?php
+/**
+ * Good 1.0 (Gif oriented object drawing)
+ *
+ * @author franckysolo
+ */
 namespace Good\Gd;
 use Good\Gd\Pattern\Fill;
 use Good\Core\Interfaces\Drawable;
@@ -16,7 +21,6 @@ use Good\Gd\Color\Palette;
  * @version $Id: $
  * @desc : the layer class
  */
-
 class Layer
 {
 	/**
@@ -44,7 +48,9 @@ class Layer
 	protected $_transparence = 0;
 	
 	/**
+	 * The layer filters
 	 * 
+	 * @access protected
 	 * @var array
 	 */
 	protected $_filters = array();
@@ -64,6 +70,9 @@ class Layer
 	
 	/**
 	 * clone the layer
+	 * 
+	 * @access public
+	 * @return void
 	 */
 	public function __clone()
 	{
@@ -157,6 +166,8 @@ class Layer
 	}
 	
 	/**
+	 * Add a filter to the layer
+	 * 
 	 * @access public
 	 * @param Filter $filter
 	 * @return \Good\Gd\Layer
@@ -168,6 +179,8 @@ class Layer
 	}
 	
 	/**
+	 * Returns the layer filters
+	 * 
 	 * @access public
 	 * @return array
 	 */
@@ -177,6 +190,8 @@ class Layer
 	}
 	
 	/**
+	 * Check if layer has a filter
+	 * 
 	 * @access public
 	 * @return boolean
 	 */

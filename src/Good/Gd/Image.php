@@ -1,4 +1,9 @@
 <?php
+/**
+ * Good 1.0 (Gif oriented object drawing)
+ *
+ * @author franckysolo
+ */
 namespace Good\Gd;
 use Good\Gd\Transformation\Merge;
 use Good\Gd\Pattern\Fill;
@@ -21,30 +26,38 @@ class Image
 {		
 	/**
 	 * 
+	 * @access protected
 	 * @var LayerList
 	 */
 	protected $_layerList;
 	
 	/**
 	 * 
+	 * @access protected
 	 * @var integer
 	 */
 	protected $_activeLayerIndex = 0;
 	
 	/**
+	 * The image dimension 
 	 * 
+	 * @access protected
 	 * @var array
 	 */
 	protected $_canvasSize;
 	
 	/**
+	 * The html attributes
 	 * 
+	 * @access protected
 	 * @var array
 	 */
 	protected $_htmlAttributes = array('src' => '', 'alt' => __CLASS__);
 		
 	/**
+	 * Import an image and create a Image class with the resource
 	 * 
+	 * @access public
 	 * @param string $filename
 	 * @return \Good\Gd\Image
 	 */
@@ -71,7 +84,9 @@ class Image
 	}
 	
 	/**
+	 * Create a new image
 	 * 
+	 * @access public
 	 * @param integer $width
 	 * @param integer $height
 	 */
@@ -82,7 +97,10 @@ class Image
 	}
 	
 	/**
+	 * Clone an image
 	 * 
+	 * @access public
+	 * @return void
 	 */
 	public function __clone()
 	{
@@ -97,7 +115,9 @@ class Image
 	}
 	
 	/**
+	 * Set the image dimension
 	 * 
+	 * @access public
 	 * @param integer $width
 	 * @param integer $height
 	 * @return \Good\Gd\Image
@@ -109,7 +129,9 @@ class Image
 	}
 	
 	/**
+	 * Returns the image dimension
 	 * 
+	 * @access public
 	 * @return array
 	 */
 	public function getCanvasSize()
@@ -118,7 +140,9 @@ class Image
 	}
 	
 	/**
+	 * Create a new layer
 	 * 
+	 * @access public
 	 * @param string $name
 	 * @param Resource $resource
 	 * @throws \BadMethodCallException
@@ -144,7 +168,9 @@ class Image
 	}
 	
 	/**
+	 * Add a new layer to the layer list
 	 * 
+	 * @access public
 	 * @param string $name
 	 * @param Layer $layer
 	 * @param string $color
@@ -176,6 +202,13 @@ class Image
 		return $this->_layerList->get($this->_activeLayerIndex);	
 	}
 	
+	/**
+	 * Remove a specified layer from the list
+	 * 
+	 * @access public
+	 * @param integer $index
+	 * @return  \Good\Gd\Layer
+	 */
 	public function removeLayer($index)
 	{
 		if(null == $index) {
@@ -185,6 +218,13 @@ class Image
 		return $this->_layerList->remove($index);
 	}
 	
+	/**
+	 * Returns of a specified layer from the list
+	 * 
+	 * @access public
+	 * @param integer $index
+	 * @return \Good\Gd\Layer
+	 */
 	public function getLayer($index = null)
 	{
 		if(null == $index) {
@@ -194,6 +234,14 @@ class Image
 		return $this->_layerList->get($index);
 	}
 	
+	/**
+	 * Set a specified layer on the list
+	 * 
+	 * @access public
+	 * @param Layer $layer
+	 * @param integer $index
+	 * @return boolean
+	 */
 	public function setLayer(Layer $layer, $index = null)
 	{
 		if(null == $index) {
@@ -203,12 +251,27 @@ class Image
 		return $this->_layerList->set($index, $layer);
 	}
 	
+	/**
+	 * Set the layer list
+	 * 
+	 * @access public
+	 * @param LayerList $layerlist
+	 * @return \Good\Gd\Image
+	 */
 	public function setLayerList(LayerList $layerlist)
 	{
 		$this->_layerList = $layerlist;	
 		return $this;
 	}
 	
+	/**
+	 * Set the visibility of a specified layer
+	 * 
+	 * @access public
+	 * @param integer $transparence
+	 * @param integer $index
+	 * @return \Good\Gd\Image
+	 */
 	public function setLayerVisibility($transparence, $index = null)
 	{
 		if(null == $index) {
@@ -221,6 +284,14 @@ class Image
 		return $this;
 	}
 	
+	/**
+	 * Set the active layer from the layer list
+	 * 
+	 * @access public
+	 * @param integer $index
+	 * @throws \InvalidArgumentException
+	 * @return \Good\Gd\Image
+	 */
 	public function setActiveLayerIndex($index)
 	{
 		if($index < 0 || $index >= $this->_layerList->count()) {
@@ -232,17 +303,38 @@ class Image
 		return $this;
 	}
 	
+	/**
+	 * Returns the layer list
+	 * 
+	 * @access public
+	 * @return \Good\Gd\LayerList
+	 */
 	public function getLayerList()
 	{
 		return $this->_layerList;
 	}
 	
+	/**
+	 * Save an image
+	 * 
+	 * @param string $name
+	 * @param string $codec
+	 * @return \Good\Gd\Image
+	 */
 	public function save($name = 'image', $codec = Codec::PNG)
 	{
 		$this->saveAs($name, $codec);
 		return $this;
 	}
 	
+	/**
+	 * Merge layers, encode & save an image
+	 * 
+	 * @access public
+	 * @param string $name
+	 * @param string $codec
+	 * @return \Good\Gd\Image
+	 */
 	public function saveAs($name, $codec)
 	{
 		$codec = Codec::factory($codec);
@@ -272,6 +364,12 @@ class Image
 		return $this;
 	}
 	
+	/**
+	 * Send & encode the image to http header
+	 * 
+	 * @access public
+	 * @param string $codec
+	 */
 	public function send($codec = Codec::PNG)
 	{
 		$codec = Codec::factory($codec);
@@ -279,12 +377,27 @@ class Image
 		$codec->encode($resource->getResource(), null);
 	}
 	
+	/**
+	 * Set an html attribute
+	 * 
+	 * @access public
+	 * @param string $name
+	 * @param string $value
+	 * @return \Good\Gd\Image
+	 */
 	public function setHtmlAttribute($name, $value)
 	{
 		$this->_htmlAttributes[(string)$name] = $value;			
 		return $this;
 	}
 	
+	/**
+	 * Set the image html attributes
+	 * 
+	 * @access public
+	 * @param array $attributes
+	 * @return \Good\Gd\Image
+	 */
 	public function setHtmlAttributes(array $attributes = array())
 	{
 		foreach($attributes as $name => $value) {
@@ -294,6 +407,13 @@ class Image
 		return $this;
 	}
 	
+	/**
+	 * Returns an html attribute
+	 * 
+	 * @access public
+	 * @param string $name
+	 * @return string
+	 */
 	public function getHtmlAttribute($name)
 	{
 		if(isset($this->_htmlAttributes[$name])) {
@@ -303,6 +423,12 @@ class Image
 		return '';
 	}
 	
+	/**
+	 * Returns the image html attributes
+	 * 
+	 * @access public
+	 * @return array
+	 */
 	public function getHtmlAttributes()
 	{
 		return $this->_htmlAttributes;
