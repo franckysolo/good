@@ -1,4 +1,9 @@
 <?php
+/**
+ * Good 1.0 (Gif oriented object drawing)
+ *
+ * @author franckysolo
+ */
 namespace Good\UnitTest;
 use Good\UnitTest\Report\CaseResult;
 use Good\Core\Interfaces\Runnable;
