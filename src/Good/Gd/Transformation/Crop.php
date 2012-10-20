@@ -1,6 +1,10 @@
 <?php
+/**
+ * Good 1.0 (Gif oriented object drawing)
+ *
+ * @author franckysolo
+ */
 namespace Good\Gd\Transformation;
-
 use Good\Gd\Color\Palette;
 use Good\Gd\Layer;
 use Good\Gd\Resource;
