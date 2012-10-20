@@ -1,8 +1,12 @@
 <?php
+/**
+ * Good 1.0 (Gif oriented object drawing)
+ *
+ * @author franckysolo
+ */
 namespace Good\Gd\Pattern;
 use Good\Gd\Color;
-use Good\Gd\Pattern;
-use Good\Gd\Pattern\Line;
+use Good\Gd\Pattern\Ellipse;
 /** 
  *  Good 1.0
  *
@@ -10,18 +14,38 @@ use Good\Gd\Pattern\Line;
  * @since 3 oct. 2012
  * @license license.txt
  * @category Good 
- * @package
- * @subpackage
- * @filesource DashedLine.php
+ * @package Gd
+ * @subpackage Pattern
+ * @filesource DashedEllipse.php
  * @version $Id: $
- * @desc :
+ * @desc : the dashed ellipse pattern class
  */
 class DashedEllipse extends Ellipse
 {
+	/**
+	 * The background color
+	 * 
+	 * @access protected
+	 * @var mixed array | null
+	 */
 	protected $_backgroundColor = null;
 	
+	/**
+	 * The foreground color
+	 * 
+	 * @access protected
+	 * @var mixed array | null
+	 */
 	protected $_foregroundColor = array();
 	
+	/**
+	 * Set the background color
+	 * 
+	 * @access public
+	 * @param string | integer $color
+	 * @param integer $number
+	 * @return \Good\Gd\Pattern\DashedEllipse
+	 */
 	public function setBackgroundColor($color, $number = 5)
 	{
 		$backgroundColor = new Color($color);
@@ -33,6 +57,14 @@ class DashedEllipse extends Ellipse
 		return $this;
 	}
 	
+	/**
+	 * Set the foreground color
+	 * 
+	 * @access public
+	 * @param string | integer $color
+	 * @param integer $number
+	 * @return \Good\Gd\Pattern\DashedEllipse
+	 */
 	public function setForegroundColor($color, $number = 5)
 	{
 		$foregroundColor = new Color($color);
@@ -41,8 +73,10 @@ class DashedEllipse extends Ellipse
 		for($i = 0; $i < $number; $i++) {
 			$this->_foregroundColor[] = $index;
 		}
+		
 		return $this;
 	}
+	
 	/**
 	 * (non-PHPdoc)
 	 * @see Good\Gd\Pattern.Line::draw()

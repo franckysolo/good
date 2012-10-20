@@ -1,4 +1,9 @@
 <?php
+/**
+ * Good 1.0 (Gif oriented object drawing)
+ *
+ * @author franckysolo
+ */
 namespace Good\Gd\Pattern;
 use Good\Gd\Gradient\Radial;
 use Good\Gd\Pattern;

@@ -1,4 +1,9 @@
 <?php
+/**
+ * Good 1.0 (Gif oriented object drawing)
+ *
+ * @author franckysolo
+ */
 namespace Good\Gd\Pattern;
 use Good\Gd\Color;
 use Good\Gd\Pattern;
@@ -10,11 +15,11 @@ use Good\Gd\Pattern\Line;
  * @since 3 oct. 2012
  * @license license.txt
  * @category Good 
- * @package
- * @subpackage
- * @filesource DashedLine.php
+ * @package Gd
+ * @subpackage Pattern
+ * @filesource DashedRectangle.php
  * @version $Id: $
- * @desc :
+ * @desc : the dashed rectangle
  */
 class DashedRectangle extends DashedLine
 {

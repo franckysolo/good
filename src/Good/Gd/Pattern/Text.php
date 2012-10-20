@@ -1,7 +1,24 @@
 <?php
+/**
+ * Good 1.0 (Gif oriented object drawing)
+ *
+ * @author franckysolo
+ */
 namespace Good\Gd\Pattern;
 use Good\Gd\Pattern;
-
+ /**
+ *  Good 1.0
+ *
+ * @author franckysolo <franckysolo@gmail.com>
+ * @since 20 oct. 2012
+ * @license license.txt
+ * @category Good 
+ * @package Gd
+ * @subpackage Pattern
+ * @filesource Text.php
+ * @version $Id: $
+ * @desc : the pattern ttf text class
+ */
 class Text extends Pattern
 {
 	/**

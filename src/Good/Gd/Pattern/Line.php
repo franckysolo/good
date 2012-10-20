@@ -1,4 +1,9 @@
 <?php
+/**
+ * Good 1.0 (Gif oriented object drawing)
+ *
+ * @author franckysolo
+ */
 namespace Good\Gd\Pattern;
 use Good\Gd\Pattern;
 /** *
@@ -13,15 +18,23 @@ use Good\Gd\Pattern;
  * @filesource Line.php
  * @version $Id: $
  * @desc : the line pattern class
- * @uses :  drawing a line on image
  */
- 
 class Line extends Pattern
 {
+	/**
+	 * The line thickness
+	 * 
+	 * @access protected
+	 * @var integer
+	 */
 	protected $_thickness = 1;
 	
 	/**
-	 * @param unknown_type $resource
+	 * Set the line thickness
+	 * 
+	 * @access public
+	 * @param integer $thickness
+	 * @return \Good\Gd\Pattern\Line
 	 */
 	public function setThickness($thickness) 
 	{
@@ -29,6 +42,12 @@ class Line extends Pattern
 		return $this;
 	}
 	
+	/**
+	 * Returns the line thickness
+	 * 
+	 * @access public
+	 * @return integer
+	 */
 	public function getThickness() 
 	{
 		return $this->_thickness;

@@ -1,12 +1,27 @@
 <?php
+/**
+ * Good 1.0 (Gif oriented object drawing)
+ *
+ * @author franckysolo
+ */
 namespace Good\Gd\Pattern;
+use Good\Core\Interfaces\Drawable;
 use Good\Gd\Color;
-
-use Good\Interfaces\Drawable;
-
 use Good\Gd\Pattern;
-
-class Fractal extends Pattern
+ /**
+ *  Good 1.0
+ *
+ * @author franckysolo <franckysolo@gmail.com>
+ * @since 20 oct. 2012
+ * @license license.txt
+ * @category Good 
+ * @package
+ * @subpackage
+ * @filesource Fractal.php
+ * @version $Id: $
+ * @desc :
+ */
+abstract class Fractal extends Pattern
 {
 	/**
 	 * The zoom
@@ -123,7 +138,9 @@ class Fractal extends Pattern
 		imagestring($resource, 1, 1, 1, utf8_decode($chrono), 0xff0000);
 	}
 	
-	public function draw(){
-		return $this;
-	}
+	/**
+	 * (non-PHPdoc)
+	 * @see Good\Gd.Pattern::draw()
+	 */
+	abstract  public function draw();
 }

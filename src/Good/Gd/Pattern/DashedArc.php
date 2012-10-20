@@ -1,8 +1,12 @@
 <?php
+/**
+ * Good 1.0 (Gif oriented object drawing)
+ *
+ * @author franckysolo
+ */
 namespace Good\Gd\Pattern;
 use Good\Gd\Color;
-use Good\Gd\Pattern;
-use Good\Gd\Pattern\Line;
+use Good\Gd\Pattern\DashedEllipse;
 /** 
  *  Good 1.0
  *
@@ -14,35 +18,10 @@ use Good\Gd\Pattern\Line;
  * @subpackage Pattern
  * @filesource DashedLine.php
  * @version $Id: $
- * @desc :
+ * @desc : the dashed arc pattern class
  */
-class DashedArc extends Arc
+class DashedArc extends DashedEllipse
 {
-	protected $_backgroundColor = null;
-	
-	protected $_foregroundColor = array();
-	
-	public function setBackgroundColor($color, $number = 5)
-	{
-		$backgroundColor = new Color($color);
-		$backgroundColor->allocate($this->_resource);
-		$index = $backgroundColor->getIndex();
-		for($i = 0; $i < $number; $i++) {
-			$this->_backgroundColor[] = $index;
-		}
-		return $this;
-	}
-	
-	public function setForegroundColor($color, $number = 5)
-	{
-		$foregroundColor = new Color($color);
-		$foregroundColor->allocate($this->_resource);
-		$index = $foregroundColor->getIndex();
-		for($i = 0; $i < $number; $i++) {
-			$this->_foregroundColor[] = $index;
-		}
-		return $this;
-	}
 	/**
 	 * (non-PHPdoc)
 	 * @see Good\Gd\Pattern.Line::draw()

@@ -1,4 +1,9 @@
 <?php
+/**
+ * Good 1.0 (Gif oriented object drawing)
+ *
+ * @author franckysolo
+ */
 namespace Good\Gd\Pattern;
 use Good\Gd\Pattern;
 /** *
@@ -14,7 +19,6 @@ use Good\Gd\Pattern;
  * @version $Id: $
  * @desc : the pixel pattern class
  */
-
 class Pixel extends Pattern
 {
 	/**

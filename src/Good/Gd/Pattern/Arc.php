@@ -1,6 +1,11 @@
 <?php
+/**
+ * Good 1.0 (Gif oriented object drawing)
+ *
+ * @author franckysolo
+ */
 namespace Good\Gd\Pattern;
-use Good\Gd\Pattern;
+use Good\Gd\Pattern\Line;
 /** 
  *  Good 1.0
  *
@@ -12,7 +17,7 @@ use Good\Gd\Pattern;
  * @subpackage Pattern
  * @filesource Arc.php
  * @version $Id: $
- * @desc :
+ * @desc : this class is used to draw an arc plot
  */
 
 class Arc extends Line
