@@ -1,4 +1,9 @@
 <?php
+/**
+ * Good 1.0 (Gif oriented object drawing)
+ *
+ * @author franckysolo
+ */
 namespace Good\Gd\Layer;
 use Good\Gd\LayerList;
 /**
@@ -8,8 +13,8 @@ use Good\Gd\LayerList;
  * @since 5 oct. 2012
  * @license license.txt
  * @category Good 
- * @package
- * @subpackage
+ * @package Gd
+ * @subpackage Layer
  * @filesource Manager.php
  * @version $Id: $
  * @desc : the layer manager class
