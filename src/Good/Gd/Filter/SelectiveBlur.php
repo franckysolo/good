@@ -1,4 +1,9 @@
 <?php
+/**
+ * Good 1.0 (Gif oriented object drawing)
+ *
+ * @author franckysolo
+ */
 namespace Good\Gd\Filter;
 use Good\Gd\Filter;
 /**
@@ -12,7 +17,7 @@ use Good\Gd\Filter;
  * @subpackage Filter
  * @filesource SelectiveBlur.php
  * @version $Id: $
- * @desc :
+ * @desc : the selective blur filter
  */
 class SelectiveBlur extends Filter
 {

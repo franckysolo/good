@@ -1,7 +1,24 @@
 <?php
+/**
+ * Good 1.0 (Gif oriented object drawing)
+ *
+ * @author franckysolo
+ */
 namespace Good\Gd\Filter;
 use Good\Gd\Filter;
-
+ /**
+ *  Good 1.0
+ *
+ * @author franckysolo <franckysolo@gmail.com>
+ * @since 20 oct. 2012
+ * @license license.txt
+ * @category Good 
+ * @package Gd
+ * @subpackage Filter
+ * @filesource Contrast.php
+ * @version $Id: $
+ * @desc : the contrast filter
+ */
 class Contrast extends Filter
 {
 	/**
