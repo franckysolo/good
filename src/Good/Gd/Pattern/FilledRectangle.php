@@ -26,14 +26,18 @@ use Good\Gd\Pattern;
 class FilledRectangle extends Pattern 
 {
 	/**
+	 * The gradient instance class
 	 * 
+	 * @access protected
 	 * @var Gradient
 	 */
 	protected $_gradient = null;
 	
 	/**
+	 * Set the gradient Radial gradient
 	 * 
-	 * @param Linear $gradient
+	 * @access public
+	 * @param Radial $gradient
 	 * @return \Good\Gd\Pattern\FilledRectangle
 	 */
 	public function setGradient(Gradient $gradient)

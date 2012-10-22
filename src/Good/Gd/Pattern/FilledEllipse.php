@@ -35,7 +35,7 @@ class FilledEllipse extends Pattern
 	 * 
 	 * @access public
 	 * @param Radial $gradient
-	 * @return \Good\Gd\Pattern\FilledRectangle
+	 * @return \Good\Gd\Pattern\FilledEllipse
 	 */
 	public function setGradient(Radial $gradient)
 	{
