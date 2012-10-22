@@ -22,7 +22,7 @@ use Good\Gd\Codec;
 final class Bmp extends Codec
 {
 	/**
-	 * @{@inheritdoc }
+	 * (non-PHPdoc)
 	 * @see Good\Gd.Codec::encode()
 	 */
 	public function encode($resource, $filename)
@@ -34,7 +34,6 @@ final class Bmp extends Codec
 
 	/**
 	 * (non-PHPdoc)
-	 * @{@inheritdoc }
 	 * @see Good\Gd.Codec::getName()
 	 */
 	public function getName($includeDot = false)
@@ -44,7 +43,6 @@ final class Bmp extends Codec
 
 	/**
 	 * (non-PHPdoc)
-	 * @{@inheritdoc }
 	 * @see Good\Gd.Codec::getMimeType()
 	 */
 	public function getMimeType()
