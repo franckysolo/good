@@ -30,6 +30,8 @@ class Manager
 	protected $_layers = array();
 	
 	/**
+	 * Create a new Layer manager
+	 * 
 	 * @access public
 	 * @param LayerList $list
 	 */
@@ -39,6 +41,8 @@ class Manager
 	}
 	
 	/**
+	 * Returns the array layers
+	 * 
 	 * @access public
 	 * @return array
 	 */

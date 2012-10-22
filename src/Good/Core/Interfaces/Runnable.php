@@ -6,7 +6,7 @@
  */
 namespace Good\Core\Interfaces;
 /**
- *  Good 1.0
+ *  Good 1.0 - The runnable interface
  *
  * @author franckysolo <franckysolo@gmail.com>
  * @since 25 sept. 2012
@@ -16,7 +16,7 @@ namespace Good\Core\Interfaces;
  * @subpackage Interfaces
  * @filesource Runnable.php
  * @version $Id: $
- * @desc : the runnable interface
+ * @desc : 
  */
 interface Runnable 
 {

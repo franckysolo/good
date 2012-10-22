@@ -22,7 +22,6 @@ use Good\Gd\Codec;
 final class Bmp extends Codec
 {
 	/**
-	 * (non-PHPdoc)
 	 * @{@inheritdoc }
 	 * @see Good\Gd.Codec::encode()
 	 */

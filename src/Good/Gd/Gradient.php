@@ -94,5 +94,9 @@ abstract class Gradient
 		return imagecolorallocate($image, $red, $green, $blue);
 	}
 	
+	/**
+	 * Apply gradient backgroundcolor
+	 * @access public
+	 */
 	abstract public function apply();
 }
