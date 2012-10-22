@@ -6,7 +6,7 @@
  */
 namespace Good\Core;
 /**
- *  Good 1.0
+ *  Good 1.0 - The View class
  *
  * @author franckysolo <franckysolo@gmail.com>
  * @since 20 oct. 2012
@@ -16,7 +16,7 @@ namespace Good\Core;
  * @subpackage Core
  * @filesource View.php
  * @version $Id: $
- * @desc : the View class
+ * @desc : 
  */
 class View
 {

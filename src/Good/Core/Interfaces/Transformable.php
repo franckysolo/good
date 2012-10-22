@@ -6,7 +6,7 @@
  */
 namespace Good\Core\Interfaces;
  /**
- *  Good 1.0
+ *  Good 1.0 - The Transformable interface
  *
  * @author franckysolo <franckysolo@gmail.com>
  * @since 20 oct. 2012
@@ -16,7 +16,7 @@ namespace Good\Core\Interfaces;
  * @subpackage
  * @filesource Transformable.php
  * @version $Id: $
- * @desc : the Transformable interface
+ * @desc : 
  */
 interface Transformable
 {

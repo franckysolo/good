@@ -6,7 +6,7 @@
  */
 namespace Good\Core\Interfaces;
 /**
- *  Good 1.0
+ *  Good 1.0 - The Drawable interface
  *
  * @author franckysolo <franckysolo@gmail.com>
  * @since 20 oct. 2012
@@ -16,7 +16,7 @@ namespace Good\Core\Interfaces;
  * @subpackage Interfaces
  * @filesource Drawable.php
  * @version $Id: $
- * @desc : the Drawable interface
+ * @desc : 
  */
 interface Drawable
 {

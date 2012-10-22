@@ -12,7 +12,7 @@ namespace Good;
  * @since 25 sept. 2012
  * @license license.txt
  * @category Phpmedias 
- * @package Core
+ * @package Good
  * @subpackage
  * @filesource Autoloader.php
  * @version $Id: $
