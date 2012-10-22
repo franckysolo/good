@@ -1,25 +1,69 @@
 <?php
-namespace Phpmedias\Graphic\Gd\Gradient;
-use Phpmedias\Graphic\Gd\Pattern\FilledRectangle;
-
-use Phpmedias\Graphic\Gd\Gradient;
-
+/**
+ *  Good 1.0
+ *
+ * @author franckysolo <franckysolo@gmail.com>
+ */
+namespace Good\Gd\Gradient;
+use Good\Gd\Pattern\FilledRectangle;
+use Good\Gd\Gradient;
+/**
+ *  Good 1.0
+ *
+ * @author franckysolo <franckysolo@gmail.com>
+ * @since 22 oct. 2012
+ * @license license.txt
+ * @category Good
+ * @package Gd
+ * @subpackage Gradient
+ * @filesource Diagonal.php
+ * @version $Id: $
+ * @desc :
+ */
 class Diagonal extends Linear
 {
-
+	/**
+	 * Obliqe style 45° scope
+	 * 
+	 * @var integer
+	 */
+	const OBLIQUE = 'oblique';
 	
-	public function adjust()
+	/**
+	 * Symetric wave
+	 * 
+	 * @var integer
+	 */
+	const SYMETRIC = 'symetric';
+	
+	/**
+	 * @param FilledRectangle $pattern
+	 * @param string $style
+	 */
+	public function __construct(FilledRectangle $pattern, $style = self::OBLIQUE) {
+		parent::__construct($pattern, $style);
+	}
+
+	/**
+	 * Check if point is contains on rectangle
+	 * 
+	 * @param float | integer $x
+	 * @param float | integer $y
+	 * @return boolean
+	 */
+	public function isContains($x, $y)
 	{
 		list($x1, $y1, $x2, $y2) = $this->_pattern->getCoordinates();
-		
-		$dx = $x2 - $x1;
-		$dy = $y2 - $y1;
-		
-		$max = $dx * $dy;
-	
-		return array($x1, $x2, $y1, $y2, $max, $dx, $dy);
+		if($x >= $x1  && $x <= $x2 && $y >= $y1 && $y <= $y2) {
+			return true;
+		}
+		return false;
 	}
 	
+	/**
+	 * (non-PHPdoc)
+	 * @see Good\Gd\Gradient.Linear::apply()
+	 */
 	public function apply()
 	{
 		$index = 1;
@@ -27,21 +71,29 @@ class Diagonal extends Linear
 			
 		list($background, $color) 	= $this->getColors();
 		list($r1, $g1, $b1) 		= $background->getRgba();
-		list($r2, $g2, $b2) 		= $color->getRgba();
+		list($r2, $g2, $b2) 		= $color->getRgba();		
+		list($xmin, $ymin, $xmax, $ymax) = $this->_pattern->getCoordinates();
+
+		$dx = $xmax - $xmin;
+		$dy = $ymax - $ymin;
 		
+		$max = $dx * $dy;
 		
-		list($xmin, $xmax, $ymin, $ymax, $max, $dx, $dy) = $this->adjust();
 		$offset = 1;
+		//@FIXME change Symetric yo reverse oblique
 		for ($i = $xmin; $i <= $xmax; $i++) {
-			for ($j = $ymin; $j <= $ymax; $j++) {
-				$offset = $max + $i + $j;
-				$x = $i;
-				$y = $j;
-				$color = $this->interpolate($image, $index, $offset);
-				imagesetpixel($image, $x, $y, $color);				
-				$index++;
-			}
-			
+			for ($j = $ymin ; $j <= $ymax; $j++) {
+				$a = ($this->_style == self::OBLIQUE) ? $i : $xmax - $i + $xmin;
+				$b = ($this->_style == self::OBLIQUE) ? $j : $ymax - $j + $ymin;
+				$c = ($this->_style == self::OBLIQUE) ? $xmin - $j + $i : $i;
+				$d = ($this->_style == self::OBLIQUE) ? $j : $ymax + $i - $j;
+				if($this->isContains($a, $b) && $this->isContains($c, $d)) {
+					$offset = $max + $i + $j;
+					$color = $this->interpolate($image, $index, $offset);
+					imageline($image, $a, $b , $c,  $d, $color);
+					$index += (self::OBLIQUE) ? 1 : 2;					
+				}
+			}			
 		}
 	}
 }

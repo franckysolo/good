@@ -1,10 +1,32 @@
 <?php
+/**
+ *  Good 1.0
+ *
+ * @author franckysolo <franckysolo@gmail.com>
+ */
 namespace Good\Gd\Gradient;
 use Good\Gd\Pattern\FilledEllipse;
 use Good\Gd\Gradient;
+/**
+ *  Good 1.0
+ *
+ * @author franckysolo <franckysolo@gmail.com>
+ * @since 22 oct. 2012
+ * @license license.txt
+ * @category Good
+ * @package Gd
+ * @subpackage Gradient
+ * @filesource Radial.php
+ * @version $Id: $
+ * @desc : the radial gradient
+ */
 class Radial extends Gradient
 {
-	public function __construct($pattern, $style = Gradient::HORIZONTAL)
+	/**
+	 * 
+	 * @param Pattern $pattern
+	 */
+	public function __construct(Pattern $pattern)
 	{
 		$this->_pattern = $pattern;
 		$this->_style  = $style;

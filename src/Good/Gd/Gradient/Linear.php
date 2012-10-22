@@ -1,16 +1,51 @@
 <?php
+/**
+ *  Good 1.0
+ *
+ * @author franckysolo <franckysolo@gmail.com>
+ */
 namespace Good\Gd\Gradient;
 use Good\Gd\Pattern\FilledRectangle;
-
 use Good\Gd\Gradient;
 
+ /**
+ *  Good 1.0
+ *
+ * @author franckysolo <franckysolo@gmail.com>
+ * @since 22 oct. 2012
+ * @license license.txt
+ * @category Good 
+ * @package
+ * @subpackage
+ * @filesource Linear.php
+ * @version $Id: $
+ * @desc :
+ */
 class Linear extends Gradient
 {
+	/**
+	 * 
+	 * @var unknown_type
+	 */
+	const VERTICAL = 'vertical';
+	
+	/**
+	 * 
+	 * @var unknown_type
+	 */
+	const HORIZONTAL = 'horizontal';
+	
+	/**
+	 * 
+	 * @param FilledRectangle $pattern
+	 * @param string $style
+	 */
 	public function __construct(FilledRectangle $pattern, $style = self::HORIZONTAL)
 	{
 		$this->_pattern = $pattern;
 		$this->_style  = $style;
 	}
+	
 	/**
 	 * Adjust points for gradient
 	 *
@@ -21,18 +56,18 @@ class Linear extends Gradient
 	{
 		list($x1, $y1, $x2, $y2) = $this->_pattern->getCoordinates();
 			
-		if($this->_style == Gradient::HORIZONTAL) {
+		if($this->_style == self::HORIZONTAL) {
 			$xmin = $x1;
 			$ymin = $y1;
 			$xmax = $x2;
 			$ymax = $y2;
 			
-		} else {
+		} else if ($this->_style == self::VERTICAL) {
 			$xmin = $y1;
 			$ymin = $x1;
 			$xmax = $y2;
 			$ymax = $x2;			
-		}
+		} 
 		
 		$dx = $xmax - $xmin;
 		$dy = $ymax - $ymin;
@@ -40,6 +75,24 @@ class Linear extends Gradient
 		$max = $dx * $dy;
 	
 		return array($xmin, $xmax, $ymin, $ymax, $max);
+	}
+	
+	public function calculate($i, $j)
+	{
+		switch($this->_style) {
+			
+			case self::VERTICAL:
+				$x = $i;
+				$y = $j;
+			break;
+				
+			case self::HORIZONTAL:
+				$x = $i;
+				$y = $j;
+			break;		
+		}
+		
+		return array($x, $y);
 	}
 	
 	/**
@@ -54,15 +107,13 @@ class Linear extends Gradient
 		list($background, $color) 	= $this->getColors();
 		list($r1, $g1, $b1) 		= $background->getRgba();
 		list($r2, $g2, $b2) 		= $color->getRgba();
-		
-		
+			
 		list($xmin, $xmax, $ymin, $ymax, $max) = $this->adjust();
 
 		for ($i = $xmin; $i <= $xmax; $i++) {
 			for ($j = $ymin; $j <= $ymax; $j++) {	
 				$offset = $max + $j + $i;
-				$x = ($this->_style == Gradient::HORIZONTAL) ? $i : $j;
-				$y = ($this->_style == Gradient::HORIZONTAL) ? $j : $i;
+				list($x, $y) = $this->calculate($i, $j);
 				$color = $this->interpolate($image, $index, $offset);
 				imagesetpixel($image, $x, $y, $color);				
 				$index++;

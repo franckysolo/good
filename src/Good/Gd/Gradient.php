@@ -1,4 +1,9 @@
 <?php
+/**
+ * Good 1.0 (Gif oriented object drawing)
+ *
+ * @author franckysolo
+ */
 namespace Good\Gd;
 use Good\Gd\Color;
 /** 
@@ -8,25 +13,14 @@ use Good\Gd\Color;
  * @since 5 oct. 2012
  * @license license.txt
  * @category Good 
- * @package
+ * @package Gd
  * @subpackage
  * @filesource Gradient.php
  * @version $Id: $
- * @desc :
+ * @desc : the gradient abstract class
  */
 abstract class Gradient
 {
-	/**
-	 * Some gradient constant
-	 * @access protected
-	 * @var int
-	 */
-	const VERTICAL = 'vertical';
-	const HORIZONTAL = 'horizontal';
-	const RADIAL = 'radial';
-	const CONICAL = 'conical';
-	const DIAGONAL = 'diagonal';
-	
 	/**
 	 * The colors of gradient
 	 * 
