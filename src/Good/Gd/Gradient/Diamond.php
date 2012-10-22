@@ -1,9 +1,9 @@
 <?php
 /**
- *  Good 1.0
+ * Good 1.0 (Gif oriented object drawing)
  *
  * @author franckysolo <franckysolo@gmail.com>
- */ 
+ */
 namespace Good\Gd\Gradient;
 use Good\Gd\Pattern\FilledRectangle;
 use Good\Gd\Gradient;

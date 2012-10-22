@@ -2,7 +2,7 @@
 /**
  * Good 1.0 (Gif oriented object drawing)
  *
- * @author franckysolo
+ * @author franckysolo <franckysolo@gmail.com>
  */
 namespace Good\Gd;
 /**
