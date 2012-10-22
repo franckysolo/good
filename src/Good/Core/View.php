@@ -12,8 +12,8 @@ namespace Good\Core;
  * @since 20 oct. 2012
  * @license license.txt
  * @category Good 
- * @package Core
- * @subpackage
+ * @package Good
+ * @subpackage Core
  * @filesource View.php
  * @version $Id: $
  * @desc : the View class
@@ -88,6 +88,8 @@ class View
 	}
 	
 	/**
+	 * Returns unknowed parameter view
+	 * 
 	 * @param string $name
 	 * @throws \InvalidArgumentException
 	 * @return mixed
@@ -103,6 +105,8 @@ class View
 	}
 	
 	/**
+	 * Call unknowed methods view
+	 * 
 	 * @param string $method
 	 * @param mixed $args
 	 * @throws \InvalidArgumentException
@@ -119,6 +123,8 @@ class View
 	}
 	
 	/**
+	 * Set unknowed parameter view, but view class is read only
+	 * 
 	 * @param string $name
 	 * @param mixed $value
 	 * @throws \InvalidArgumentException
