@@ -60,6 +60,7 @@ class Brightness extends Filter
 	
 	/**
 	 * (non-PHPdoc)
+	 * {@inheritdoc}
 	 * @see Good\Gd.Filter::apply()
 	 */
 	public function apply($resource)

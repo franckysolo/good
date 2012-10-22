@@ -21,10 +21,10 @@ use Good\Gd\Codec;
  */
 final class Bmp extends Codec
 {
+
 	/**
 	 * (non-PHPdoc)
-	 * 
-	 * @see Good\Gd.Codec::encode($resource, $filename)
+	 * @see Good\Gd.Codec::encode()
 	 */
 	public function encode($resource, $filename)
 	{
@@ -34,8 +34,7 @@ final class Bmp extends Codec
 	}
 
 	/**
-	 * (non-PHPdoc)
-	 * 
+	 * @{inheritdoc}
 	 * @see Good\Gd.Codec::getName($includeDot)
 	 */
 	public function getName($includeDot = false)
