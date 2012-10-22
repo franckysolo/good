@@ -1,25 +1,24 @@
 <?php
 /**
- * Good 1.0 (Gif oriented object drawing)
- *
- * @author franckysolo
+ * Good (Gif oriented object drawing)
+ * 
+ * @version 1.0
+ * @author franckysolo <franckysolo@gmail.com>
  */
 namespace Good\UnitTest;
 use Good\Core\Interfaces\Runnable;
 /**
- *  Good 1.0 - The serie test class 
+ *  The serie test class 
  *  
- *  Its represent a serie of unit test
- *
+ *  This class represent a serie of unit test
+ *  
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  * @since 25 sept. 2012
- * @license license.txt
+ * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
  * @category Good 
  * @package Good
  * @subpackage UnitTest
- * @filesource Serie.php
- * @version $Id: $
- * @desc : 
  */
 class Serie implements Runnable
 {

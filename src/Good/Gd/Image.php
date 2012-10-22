@@ -1,7 +1,8 @@
 <?php
 /**
- * Good 1.0 (Gif oriented object drawing)
- *
+ * Good (Gif oriented object drawing)
+ * 
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  */
 namespace Good\Gd;
@@ -10,17 +11,15 @@ use Good\Gd\Pattern\Fill;
 use Good\Gd\Color\Palette;
 use Good\Core\View;
 /** 
- *  Good 1.0
- *
+ * The image class
+ * 
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  * @since 28 sept. 2012
- * @license license.txt
+ * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
  * @category Good 
  * @package Good
  * @subpackage Gd
- * @filesource Image.php
- * @version $Id: $
- * @desc : the image class
  */
 class Image
 {		

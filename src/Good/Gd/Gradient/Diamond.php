@@ -1,24 +1,23 @@
 <?php
 /**
- * Good 1.0 (Gif oriented object drawing)
- *
+ * Good (Gif oriented object drawing)
+ * 
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  */
 namespace Good\Gd\Gradient;
 use Good\Gd\Pattern\FilledRectangle;
 use Good\Gd\Gradient;
 /**
- *  Good 1.0
- *
+ * The diamond gradient class
+ * 
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  * @since 22 oct. 2012
- * @license license.txt
+ * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
  * @category Good
  * @package Gd
  * @subpackage Gradient
- * @filesource Diamond.php
- * @version $Id: $
- * @desc : the diamond gradient
  */
 class Diamond extends Diagonal
 {

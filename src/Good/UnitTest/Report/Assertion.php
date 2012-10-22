@@ -1,22 +1,21 @@
 <?php
 /**
- * Good 1.0 (Gif oriented object drawing)
- *
- * @author franckysolo
+ * Good (Gif oriented object drawing)
+ * 
+ * @version 1.0
+ * @author franckysolo <franckysolo@gmail.com>
  */
 namespace Good\UnitTest\Report;
 /**
- *  Good 1.0 - The class assertion for unit test
- *
+ * The class assertion for unit test
+ * 
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  * @since 25 sept. 2012
- * @license license.txt
+ * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
  * @category Good 
- * @package UnitTest
+ * @package Good\UnitTest
  * @subpackage Report
- * @filesource Assertion.php
- * @version $Id: $
- * @desc : 
  */
 class Assertion
 {

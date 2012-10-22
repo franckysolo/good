@@ -1,25 +1,24 @@
 <?php
 /**
- *  Good 1.0
- *
+ * Good (Gif oriented object drawing)
+ * 
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  */
 namespace Good\Gd\Gradient;
 use Good\Gd\Pattern\FilledRectangle;
 use Good\Gd\Gradient;
 
- /**
- *  Good 1.0
- *
+/**
+ *  The linear gradient class
+ *  
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  * @since 22 oct. 2012
- * @license license.txt
+ * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
  * @category Good 
- * @package
- * @subpackage
- * @filesource Linear.php
- * @version $Id: $
- * @desc :
+ * @package Good\Gd
+ * @subpackage Gradient
  */
 class Linear extends Gradient
 {

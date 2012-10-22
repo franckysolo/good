@@ -1,24 +1,24 @@
 <?php
 /**
- * Good 1.0 (Gif oriented object drawing)
- *
- * @author franckysolo
+ * Good (Gif oriented object drawing)
+ * 
+ * @version 1.0
+ * @author franckysolo <franckysolo@gmail.com>
  */
 namespace Good\Gd;
 use Good\Gd\Color\Palette;
 use Good\Core\Interfaces\Drawable;
 /**
- *  Good 1.0
- *
+ * 
+ * The pattern abstract class
+ *  
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  * @since 27 sept. 2012
- * @license license.txt
+ * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
  * @category Good 
  * @package Good
  * @subpackage Gd 
- * @filesource Pattern.php
- * @version $Id: $
- * @desc : the pattern class
  */
 abstract class Pattern implements Drawable
 {

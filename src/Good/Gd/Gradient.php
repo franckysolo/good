@@ -1,23 +1,22 @@
 <?php
 /**
- * Good 1.0 (Gif oriented object drawing)
- *
+ * Good (Gif oriented object drawing)
+ * 
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  */
 namespace Good\Gd;
 use Good\Gd\Color;
 /** 
- *  Good 1.0
- *
+ * The gradient abstract class
+ * 
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  * @since 5 oct. 2012
- * @license license.txt
+ * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
  * @category Good 
  * @package Good
- * @subpackage Gd
- * @filesource Gradient.php
- * @version $Id: $
- * @desc : the gradient abstract class
+ * @subpackage Gd 
  */
 abstract class Gradient
 {

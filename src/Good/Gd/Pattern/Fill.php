@@ -1,25 +1,23 @@
 <?php
 /**
- * Good 1.0 (Gif oriented object drawing)
- *
- * @author franckysolo
+ * Good (Gif oriented object drawing)
+ * 
+ * @version 1.0
+ * @author franckysolo <franckysolo@gmail.com>
  */
 namespace Good\Gd\Pattern;
 use Good\Gd\Pattern;
 /** 
- *  Good 1.0
- *
+ * The fill class pattern
+ * 
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  * @since 28 sept. 2012
- * @license license.txt
+ * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
  * @category Good 
- * @package
- * @subpackage
- * @filesource Fill.php
- * @version $Id: $
- * @desc :
+ * @package Good\Gd
+ * @subpackage Pattern
  */
-
 class Fill extends Pattern 
 {
 	/**

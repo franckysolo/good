@@ -1,23 +1,22 @@
 <?php
 /**
- * Good 1.0 (Gif oriented object drawing)
- *
- * @author franckysolo
+ * Good (Gif oriented object drawing)
+ * 
+ * @version 1.0
+ * @author franckysolo <franckysolo@gmail.com>
  */
 namespace Good\Gd\Filter;
 use Good\Gd\Filter;
 /** 
- *  Good 1.0
- *
+ * The emboss filter class
+ * 
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  * @since 27 sept. 2012
- * @license license.txt
+ * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
  * @category Good 
- * @package Gd
- * @subpackage Filter
- * @filesource Emboss.php
- * @version $Id: $
- * @desc : the emboss filter
+ * @package Good\Gd
+ * @subpackage Filter 
  */
 class Emboss extends Filter
 {

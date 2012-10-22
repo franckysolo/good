@@ -1,8 +1,9 @@
 <?php
 /**
- * Good 1.0 (Gif oriented object drawing)
- *
- * @author franckysolo
+ * Good (Gif oriented object drawing)
+ * 
+ * @version 1.0
+ * @author franckysolo <franckysolo@gmail.com>
  */
 namespace Good\Gd\Transformation;
 use Good\Gd\Layer;
@@ -10,17 +11,15 @@ use Good\Gd\Layer;
 use Good\Gd\Resource;
 use Good\Gd\Transformation;
 /**
- *  Good 1.0
- *
+ * The rotation class transformation
+ * 
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  * @since 27 sept. 2012
- * @license license.txt
+ * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
  * @category Good 
  * @package Gd
  * @subpackage Transformation
- * @filesource Rotation.php
- * @version $Id: $
- * @desc :
  */
 class Rotation extends Transformation
 {			

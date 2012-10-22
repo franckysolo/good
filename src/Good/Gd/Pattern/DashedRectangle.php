@@ -1,25 +1,24 @@
 <?php
 /**
- * Good 1.0 (Gif oriented object drawing)
- *
- * @author franckysolo
+ * Good (Gif oriented object drawing)
+ * 
+ * @version 1.0
+ * @author franckysolo <franckysolo@gmail.com>
  */
 namespace Good\Gd\Pattern;
 use Good\Gd\Color;
 use Good\Gd\Pattern;
 use Good\Gd\Pattern\Line;
 /** 
- *  Good 1.0
- *
+ * The dashed rectangle
+ * 
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  * @since 3 oct. 2012
- * @license license.txt
+ * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
  * @category Good 
- * @package Gd
- * @subpackage Pattern
- * @filesource DashedRectangle.php
- * @version $Id: $
- * @desc : the dashed rectangle
+ * @package Good\Gd
+ * @subpackage Pattern 
  */
 class DashedRectangle extends DashedLine
 {

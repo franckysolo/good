@@ -1,22 +1,21 @@
 <?php
 /**
- * Good 1.0 (Gif oriented object drawing)
- *
+ * Good (Gif oriented object drawing)
+ * 
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  */
 namespace Good\Gd;
 /**
- *  Good 1.0
- *
+ *  The codec abstract class factory
+ *  
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  * @since 25 sept. 2012
- * @license license.txt
+ * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
  * @category Good 
  * @package Good
  * @subpackage Gd
- * @filesource Codec.php
- * @version $Id: $
- * @desc : The codec abstract class factory
  */
 abstract class Codec
 {

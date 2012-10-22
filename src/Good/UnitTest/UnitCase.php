@@ -1,24 +1,23 @@
 <?php
 /**
- * Good 1.0 (Gif oriented object drawing)
- *
- * @author franckysolo
+ * Good (Gif oriented object drawing)
+ * 
+ * @version 1.0
+ * @author franckysolo <franckysolo@gmail.com>
  */
 namespace Good\UnitTest;
 use Good\UnitTest\Report\CaseResult;
 use Good\Core\Interfaces\Runnable;
 /**
- *  Good 1.0 - The unit test class
- *
+ * The unit test class
+ * 
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  * @since 25 sept. 2012
- * @license license.txt
+ * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
  * @category Good 
  * @package Good
  * @subpackage UnitTest
- * @filesource UnitCase.php
- * @version $Id: $
- * @desc : 
  */
 abstract class UnitCase implements Runnable
 {

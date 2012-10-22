@@ -1,22 +1,21 @@
 <?php
 /**
- * Good 1.0 (Gif oriented object drawing)
- *
+ * Good (Gif oriented object drawing)
+ * 
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  */
 namespace Good\Gd\Color;
 /** 
- *  Good 1.0
- *
+ *  The palette color class
+ *  
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  * @since 28 sept. 2012
- * @license license.txt
+ * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
  * @category Good 
- * @package Gd
+ * @package Good\Gd
  * @subpackage Color
- * @filesource Palette.php
- * @version $Id: $
- * @desc : the palette color class
  */
 class Palette 
 {

@@ -1,24 +1,22 @@
 <?php
-/** 
- *  Good 1.0 (Gif oriented object drawing)
- *
+/**
+ * Good (Gif oriented object drawing)
+ * 
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  */
-
 namespace Good\Gd\Pattern\Fractal;
 use Good\Gd\Resource;
 use Good\Gd\Pattern\Fractal;
 /**
  *  Good 1.0
- *
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  * @since 22 oct. 2012
- * @license license.txt
+ * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
  * @category Good
  * @package Good\Gd\Pattern
  * @subpackage Fractal
- * @filesource MandelBrot.php
- * @version $Id: $
  * @desc :
  *  the Mandelbrot algorithme :<br />
  * 	<code>

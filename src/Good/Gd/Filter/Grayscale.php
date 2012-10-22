@@ -1,23 +1,22 @@
 <?php
 /**
- * Good 1.0 (Gif oriented object drawing)
- *
- * @author franckysolo
+ * Good (Gif oriented object drawing)
+ * 
+ * @version 1.0
+ * @author franckysolo <franckysolo@gmail.com>
  */
 namespace Good\Gd\Filter;
 use Good\Gd\Filter;
 /** 
- *  Phpmedias 1.0
- *
+ * The grayscale filter
+ * 
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  * @since 27 sept. 2012
- * @license license.txt
- * @category Phpmedias 
- * @package Gd
+ * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
+ * @category Good 
+ * @package Good\Gd
  * @subpackage Filter
- * @filesource Grayscale.php
- * @version $Id: $
- * @desc : the grayscale filter
  */
 class Grayscale extends Filter
 {

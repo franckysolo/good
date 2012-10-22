@@ -1,22 +1,21 @@
 <?php
 /**
- *  Good 1.0
- *
+ * Good (Gif oriented object drawing)
+ * 
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  */
 namespace Good\Core\Interfaces;
  /**
- *  Good 1.0 - The Transformable interface
- *
+ * The Transformable interface
+ * 
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  * @since 20 oct. 2012
- * @license license.txt
+ * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
  * @category Good 
- * @package Core
+ * @package Good\Core
  * @subpackage Interfaces
- * @filesource Transformable.php
- * @version $Id: $
- * @desc : 
  */
 interface Transformable
 {

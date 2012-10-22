@@ -6,19 +6,16 @@
  */
 namespace Good;
 /**
- *  Good 1.0 (Gif oriented object drawing)
- *
+ * The Autoloader class
+ * 
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  * @since 25 sept. 2012
- * @license license.txt
- * @category Phpmedias 
+ * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
+ * @category Good 
  * @package Good
  * @subpackage
- * @filesource Autoloader.php
- * @version $Id: $
- * @desc : class autoloader
  */
-
 class Autoloader
 {
 	/**
