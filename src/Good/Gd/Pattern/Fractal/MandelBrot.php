@@ -1,4 +1,5 @@
 <?php
+
 namespace Phpmedias\Graphic\Gd\Pattern\Fractal;
 use Phpmedias\Graphic\Gd\Resource;
 use Phpmedias\Graphic\Gd\Pattern\Fractal;
@@ -50,10 +51,7 @@ class MandelBrot extends Fractal
 	 */
 	protected $_coordinates = array(-2.1, -1.2, 0.6, 1.2);
 	
-	/**
-	 * (non-PHPdoc)
-	 * @see Phpmedias\Graphic\Gd\Pattern.Fractal::draw()
-	 */
+	
 	public function draw()
 	{
 		set_time_limit(0);

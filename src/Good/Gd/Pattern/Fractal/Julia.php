@@ -1,13 +1,18 @@
 <?php
+/**
+ * Good 1.0 (Gif oriented object drawing)
+ *
+ * @author franckysolo
+ */
 namespace Phpmedias\Graphic\Gd\Pattern\Fractal;
 use Phpmedias\Graphic\Gd\Color;
-
 use Phpmedias\Graphic\Gd\Pattern\Fractal;
-
 /**
- * 
- *
- *  <code>
+ *  Good 1.0
+ *  
+ *  The Julia algorythme
+ *  
+ * <pre>
  *  définir x1 = -1
 	définir x2 = 1
 	définir y1 = -1.2
@@ -38,10 +43,18 @@ use Phpmedias\Graphic\Gd\Pattern\Fractal;
 	        finSi
 	    finPour
 	finPour
-	</code>
-		--------------------------------------------------
+	</pre>
+ *
+ * @author franckysolo <franckysolo@gmail.com>
+ * @since 20 oct. 2012
+ * @license license.txt
+ * @category Good 
+ * @package Pattern
+ * @subpackage Fratctal
+ * @filesource Julia.php
+ * @version $Id: $
+ * @desc :
  */
-
 class Julia extends Fractal
 {
 	/**

@@ -1,7 +1,24 @@
 <?php
+/**
+ * Good 1.0 (Gif oriented object drawing)
+ *
+ * @author franckysolo
+ */
 namespace Phpmedias\Graphic\Gd\Pattern\Fractal;
 use Phpmedias\Graphic\Gd\Pattern\Fractal;
-
+ /**
+ *  Good 1.0
+ *
+ * @author franckysolo <franckysolo@gmail.com>
+ * @since 20 oct. 2012
+ * @license license.txt
+ * @category Good 
+ * @package Pattern
+ * @subpackage Fractal
+ * @filesource Budha.php
+ * @version $Id: $
+ * @desc : the budha mandelbrot fractal
+ */
 class Budha extends Fractal
 {
 	/**
@@ -67,10 +84,7 @@ class Budha extends Fractal
 		return $this;
 	}
 
-	/**
-	 * (non-PHPdoc)
-	 * @see Indy\System\Graphic\Gd.Pattern::execute()
-	 */
+	
 	public function draw()
 	{
 		set_time_limit(0);		
