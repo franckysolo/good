@@ -37,7 +37,7 @@ class FilledRectangle extends Pattern
 	 * Set the gradient Radial gradient
 	 * 
 	 * @access public
-	 * @param Radial $gradient
+	 * @param Gradient $gradient
 	 * @return \Good\Gd\Pattern\FilledRectangle
 	 */
 	public function setGradient(Gradient $gradient)
@@ -45,6 +45,7 @@ class FilledRectangle extends Pattern
 		$this->_gradient = $gradient;
 		return $this;
 	}
+	
 	/**
 	 * (non-PHPdoc)
 	 * @see Good\Gd.Pattern::draw()

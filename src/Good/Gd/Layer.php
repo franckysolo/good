@@ -60,7 +60,7 @@ class Layer
 	 * 
 	 * @access public
 	 * @param string $name
-	 * @param Resource $resource
+	 * @param \Good\Gd\Resource $resource
 	 * @param string | integer $backgroundColor
 	 */
 	public function __construct($name, Resource $resource, $backgroundColor = Palette::TRANSPARENT)
