@@ -17,8 +17,8 @@ use Good\Gd\Transformation;
  * @since 29 sept. 2012
  * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
  * @category Good 
- * @package
- * @subpackage
+ * @package Good\Gd
+ * @subpackage Transformation
  */
 class Thumbnail extends Transformation
 {
