@@ -14,8 +14,8 @@ namespace Good\Core;
  * @since 20 oct. 2012
  * @license license.txt
  * @category Good 
- * @package Good
- * @subpackage Core
+ * @package Core
+ * @subpackage 
  * @filesource View.php
  * @version $Id: $
  * @desc : 

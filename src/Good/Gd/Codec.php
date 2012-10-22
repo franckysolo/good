@@ -123,11 +123,12 @@ abstract class Codec
 	
 	/**
 	 * Get the codec name
-	 *
+	 * 
+	 * @param boolean $includeDot
 	 * @access public
 	 * @return string
 	 */
-	abstract public function getName();
+	abstract public function getName($includeDot);
 	
 	/**
 	 * Get the mime type
