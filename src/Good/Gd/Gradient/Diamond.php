@@ -23,6 +23,9 @@ use Good\Gd\Gradient;
 class Diamond extends Diagonal
 {
 	/**
+	 * Create a new diagonal gradient
+	 * 
+	 * @access public
 	 * @param FilledRectangle $pattern
 	 */
 	public function __construct(FilledRectangle $pattern)

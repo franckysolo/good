@@ -37,6 +37,8 @@ class Diagonal extends Linear
 	const SYMETRIC = 'symetric';
 	
 	/**
+	 * Create a new diagonal gradient
+	 * 
 	 * @param FilledRectangle $pattern
 	 * @param string $style
 	 */

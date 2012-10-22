@@ -20,17 +20,20 @@ use Good\Gd\Pattern;
  * @version $Id: $
  * @desc : the filled ellipse pattern class
  */
-
 class FilledEllipse extends Pattern
 {
 	/**
-	 *
+	 * The gradient instance class
+	 * 
+	 * @access protected
 	 * @var Gradient
 	 */
 	protected $_gradient = null;
 	
 	/**
-	 *
+	 * Set the gradient Radial gradient
+	 * 
+	 * @access public
 	 * @param Radial $gradient
 	 * @return \Good\Gd\Pattern\FilledRectangle
 	 */
