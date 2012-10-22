@@ -6,7 +6,7 @@
  */
 namespace Good\UnitTest\Report;
 /**
- *  Good 1.0
+ *  Good 1.0 - The class assertion for unit test
  *
  * @author franckysolo <franckysolo@gmail.com>
  * @since 25 sept. 2012
@@ -16,7 +16,7 @@ namespace Good\UnitTest\Report;
  * @subpackage Report
  * @filesource Assertion.php
  * @version $Id: $
- * @desc : the class assertion for unit test
+ * @desc : 
  */
 class Assertion
 {

@@ -4,14 +4,23 @@
  *
  * @author franckysolo
  */
-namespace Phpmedias\Graphic\Gd\Pattern\Fractal;
-use Phpmedias\Graphic\Gd\Color;
-use Phpmedias\Graphic\Gd\Pattern\Fractal;
+namespace Good\Gd\Pattern\Fractal;
+use Good\Gd\Color;
+use Good\Gd\Pattern\Fractal;
 /**
  *  Good 1.0
  *  
  *  The Julia algorythme
- *  
+
+ * @author franckysolo <franckysolo@gmail.com>
+ * @since 20 oct. 2012
+ * @license license.txt
+ * @category Good 
+ * @package Pattern
+ * @subpackage Fratctal
+ * @filesource Julia.php
+ * @version $Id: $
+ * @desc :
  * <pre>
  *  définir x1 = -1
 	définir x2 = 1
@@ -45,15 +54,6 @@ use Phpmedias\Graphic\Gd\Pattern\Fractal;
 	finPour
 	</pre>
  *
- * @author franckysolo <franckysolo@gmail.com>
- * @since 20 oct. 2012
- * @license license.txt
- * @category Good 
- * @package Pattern
- * @subpackage Fratctal
- * @filesource Julia.php
- * @version $Id: $
- * @desc :
  */
 class Julia extends Fractal
 {
@@ -81,7 +81,10 @@ class Julia extends Fractal
 	*/	
 	protected $_coordinates = array(-1, -1.2, 1, 1.2);
 	
-	
+	/**
+	 * (non-PHPdoc)
+	 * @see Good\Gd\Pattern.Fractal::draw()
+	 */
 	public function draw()
 	{
 		set_time_limit(0);

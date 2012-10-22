@@ -15,8 +15,8 @@ use Good\Gd\Color\Palette;
  * @since 26 sept. 2012
  * @license license.txt
  * @category Good 
- * @package Gd
- * @subpackage 
+ * @package Good
+ * @subpackage Gd 
  * @filesource Layer.php
  * @version $Id: $
  * @desc : the layer class
@@ -59,7 +59,9 @@ class Layer
 	 * Create a new layer
 	 * 
 	 * @access public
+	 * @param string $name
 	 * @param Resource $resource
+	 * @param string | integer $backgroundColor
 	 */
 	public function __construct($name, Resource $resource, $backgroundColor = Palette::TRANSPARENT)
 	{	
@@ -138,7 +140,7 @@ class Layer
 	 * Set the transparence of the layer
 	 * 
 	 * @access public
-	 * @param integer $visibility
+	 * @param integer $transparence
 	 * @return \Good\Gd\Layer
 	 */
 	public function setTransparence($transparence)

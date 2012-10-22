@@ -6,17 +6,17 @@
  */
 namespace Good\Gd;
 /**
- *  Good 1.0
+ *  Good 1.0 - The image layer list
  *
  * @author franckysolo <franckysolo@gmail.com>
  * @since 27 sept. 2012
  * @license license.txt
  * @category Good 
  * @package Good
- * @subpackage 
+ * @subpackage  Gd
  * @filesource LayerList.php
  * @version $Id: $
- * @desc : the list of image layer
+ * @desc : 
  */
 class LayerList implements \Countable
 {

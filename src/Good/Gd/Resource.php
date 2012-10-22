@@ -12,8 +12,8 @@ namespace Good\Gd;
  * @since 26 sept. 2012
  * @license license.txt
  * @category Good 
- * @package Gd
- * @subpackage 
+ * @package Good
+ * @subpackage Gd
  * @filesource Resource.php
  * @version $Id: $
  * @desc : the gd resource class

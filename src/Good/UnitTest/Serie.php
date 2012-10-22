@@ -7,17 +7,19 @@
 namespace Good\UnitTest;
 use Good\Core\Interfaces\Runnable;
 /**
- *  Good 1.0
+ *  Good 1.0 - The serie test class 
+ *  
+ *  Its represent a serie of unit test
  *
  * @author franckysolo <franckysolo@gmail.com>
  * @since 25 sept. 2012
  * @license license.txt
  * @category Good 
- * @package UnitTest
- * @subpackage
+ * @package Good
+ * @subpackage UnitTest
  * @filesource Serie.php
  * @version $Id: $
- * @desc : the serie test class, represent a serie of unit test
+ * @desc : 
  */
 class Serie implements Runnable
 {

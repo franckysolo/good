@@ -4,8 +4,8 @@
  *
  * @author franckysolo
  */
-namespace Phpmedias\Graphic\Gd\Pattern\Fractal;
-use Phpmedias\Graphic\Gd\Pattern\Fractal;
+namespace Good\Gd\Pattern\Fractal;
+use Good\Gd\Pattern\Fractal;
  /**
  *  Good 1.0
  *
@@ -84,7 +84,10 @@ class Budha extends Fractal
 		return $this;
 	}
 
-	
+	/**
+	 * (non-PHPdoc)
+	 * @see Good\Gd\Pattern.Fractal::draw()
+	 */
 	public function draw()
 	{
 		set_time_limit(0);		

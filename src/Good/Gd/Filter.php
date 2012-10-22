@@ -6,22 +6,23 @@
  */
 namespace Good\Gd;
 /** 
- *  Good 1.0
+ *  Good 1.0 - The filter abstract class
  *
  * @author franckysolo <franckysolo@gmail.com>
  * @since 28 sept. 2012
  * @license license.txt
  * @category Good 
- * @package Gd
- * @subpackage 
+ * @package Good
+ * @subpackage Gd
  * @filesource Filter.php
  * @version $Id: $
- * @desc :
+ * @desc : 
  */
 abstract class Filter
 {
 	/**
 	 * Apply a filter to layer
+	 * 
 	 * @access public
 	 * @param gd resource $resource
 	 */

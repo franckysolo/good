@@ -1,3 +1,24 @@
+<?php 
+/** 
+ *  Good 1.0 (Gif oriented object drawing)
+ *
+ * @author franckysolo <franckysolo@gmail.com>
+ */
+ 
+ /**
+ *  Good 1.0
+ *
+ * @author franckysolo <franckysolo@gmail.com>
+ * @since 22 oct. 2012
+ * @license license.txt
+ * @category Good 
+ * @package Good\UnitTest
+ * @subpackage Report
+ * @filesource Assertion.phtml
+ * @version $Id: $
+ * @desc : the assertion view
+ */
+?>
 	<ol class="box <?php echo $status = ($this->getStatus()) ? 'success' : 'failure';?>">
     	<li>Assertion : <span class="label"><?php echo $this->escape($this->getLabel()) ?></span></li>
     	<li>Fichier : <span class="file"><?php echo $this->escape($this->getFilename()); ?></span></li>

@@ -1,10 +1,25 @@
 <?php
+/** 
+ *  Good 1.0 (Gif oriented object drawing)
+ *
+ * @author franckysolo <franckysolo@gmail.com>
+ */
 
-namespace Phpmedias\Graphic\Gd\Pattern\Fractal;
-use Phpmedias\Graphic\Gd\Resource;
-use Phpmedias\Graphic\Gd\Pattern\Fractal;
-
+namespace Good\Gd\Pattern\Fractal;
+use Good\Gd\Resource;
+use Good\Gd\Pattern\Fractal;
 /**
+ *  Good 1.0
+ *
+ * @author franckysolo <franckysolo@gmail.com>
+ * @since 22 oct. 2012
+ * @license license.txt
+ * @category Good
+ * @package Good\Gd\Pattern
+ * @subpackage Fractal
+ * @filesource MandelBrot.php
+ * @version $Id: $
+ * @desc :
  *  the Mandelbrot algorithme :<br />
  * 	<code>
 	  	définir iteration_max = $iteration<br />
@@ -51,7 +66,10 @@ class MandelBrot extends Fractal
 	 */
 	protected $_coordinates = array(-2.1, -1.2, 0.6, 1.2);
 	
-	
+	/**
+	 * (non-PHPdoc)
+	 * @see Good\Gd\Pattern.Fractal::draw()
+	 */
 	public function draw()
 	{
 		set_time_limit(0);

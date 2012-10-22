@@ -14,8 +14,8 @@ use Good\Core\Interfaces\Drawable;
  * @since 27 sept. 2012
  * @license license.txt
  * @category Good 
- * @package Gd
- * @subpackage 
+ * @package Good
+ * @subpackage Gd 
  * @filesource Pattern.php
  * @version $Id: $
  * @desc : the pattern class

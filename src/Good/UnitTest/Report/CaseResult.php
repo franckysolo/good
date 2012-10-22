@@ -7,7 +7,7 @@
 namespace Good\UnitTest\Report;
 use Good\Core\Interfaces\Runnable;
 /**
- *  Good 1.0
+ *  Good 1.0 - The case result class
  *
  * @author franckysolo <franckysolo@gmail.com>
  * @since 25 sept. 2012
@@ -17,7 +17,7 @@ use Good\Core\Interfaces\Runnable;
  * @subpackage Report
  * @filesource CaseResult.php
  * @version $Id: $
- * @desc : the case result class
+ * @desc : 
  */
 class CaseResult 
 {

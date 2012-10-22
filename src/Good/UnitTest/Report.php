@@ -7,17 +7,17 @@
 namespace Good\UnitTest;
 use Good\UnitTest\Report\CaseResult;
 /**
- *  Good 1.0
+ *  Good 1.0 - The test report class
  *
  * @author franckysolo <franckysolo@gmail.com>
  * @since 25 sept. 2012
  * @license license.txt
  * @category Good 
- * @package UnitTest
- * @subpackage
+ * @package Good
+ * @subpackage UnitTest
  * @filesource Report.php
  * @version $Id: $
- * @desc : the test report class
+ * @desc : 
  */
 class Report
 {

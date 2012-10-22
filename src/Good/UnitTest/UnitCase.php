@@ -8,17 +8,17 @@ namespace Good\UnitTest;
 use Good\UnitTest\Report\CaseResult;
 use Good\Core\Interfaces\Runnable;
 /**
- *  Good 1.0
+ *  Good 1.0 - The unit test class
  *
  * @author franckysolo <franckysolo@gmail.com>
  * @since 25 sept. 2012
  * @license license.txt
  * @category Good 
- * @package UnitTest
- * @subpackage
+ * @package Good
+ * @subpackage UnitTest
  * @filesource UnitCase.php
  * @version $Id: $
- * @desc : the unit test class
+ * @desc : 
  */
 abstract class UnitCase implements Runnable
 {

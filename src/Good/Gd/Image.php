@@ -16,8 +16,8 @@ use Good\Core\View;
  * @since 28 sept. 2012
  * @license license.txt
  * @category Good 
- * @package Gd
- * @subpackage 
+ * @package Good
+ * @subpackage Gd
  * @filesource Image.php
  * @version $Id: $
  * @desc : the image class
@@ -25,13 +25,15 @@ use Good\Core\View;
 class Image
 {		
 	/**
-	 * 
+	 * The layer list contains layers array each layer add a gd resource
+	 *  
 	 * @access protected
 	 * @var LayerList
 	 */
 	protected $_layerList;
 	
 	/**
+	 * The index key of active layer
 	 * 
 	 * @access protected
 	 * @var integer

@@ -52,6 +52,7 @@ abstract class Fractal extends Pattern
 	 *
 	 * @access public
 	 * @param integer $zoom
+	 * @return \Good\Gd\Pattern\Fractal
 	 */
 	public function setZoom($zoom){
 		$this->_zoom = (int)$zoom;
@@ -73,6 +74,7 @@ abstract class Fractal extends Pattern
 	 *
 	 * @access public
 	 * @param integer $iteration
+	 * @return \Good\Gd\Pattern\Fractal
 	 */
 	public function setMaxIteration($iteration) {
 		$this->_maxIteration = (int)$iteration;
@@ -94,6 +96,7 @@ abstract class Fractal extends Pattern
 	 *
 	 * @access public
 	 * @param mixed (Color | string) $color
+	 * @return \Good\Gd\Pattern\Fractal
 	 */
 	public function setBackgroundColor($color = null) {
 		if(null == $color) {
@@ -113,6 +116,7 @@ abstract class Fractal extends Pattern
 	 * Get the background color
 	 *
 	 * @access public
+	 * @return integer
 	 */
 	public function getBackgroundColor()
 	{

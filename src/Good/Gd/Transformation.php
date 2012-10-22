@@ -13,8 +13,8 @@ use Good\Core\Interfaces\Transformable;
  * @since 28 sept. 2012
  * @license license.txt
  * @category Good 
- * @package Gd
- * @subpackage 
+ * @package Good
+ * @subpackage Gd 
  * @filesource Transformation.php
  * @version $Id: $
  * @desc : execute transformation on resource
