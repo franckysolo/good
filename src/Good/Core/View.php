@@ -107,7 +107,7 @@ class View
 	}
 	
 	/**
-	 * Call unknowed methods view
+	 * Call undefined methods view
 	 * 
 	 * @param string $method
 	 * @param mixed $args
@@ -125,7 +125,7 @@ class View
 	}
 	
 	/**
-	 * Set unknowed parameter view, but view class is read only
+	 * Set undefined parameter view, but view class is read only
 	 * 
 	 * @param string $name
 	 * @param mixed $value
