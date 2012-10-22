@@ -36,7 +36,7 @@ class FilledRectangle extends Pattern
 	 * @param Linear $gradient
 	 * @return \Good\Gd\Pattern\FilledRectangle
 	 */
-	public function setGradient(Linear $gradient)
+	public function setGradient(Gradient $gradient)
 	{
 		$this->_gradient = $gradient;
 		return $this;
