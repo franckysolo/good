@@ -1,23 +1,22 @@
 <?php
 /**
- * Good 1.0 (Gif oriented object drawing)
- *
+ * Good (Gif oriented object drawing)
+ * @version 1.0
  * @author franckysolo <franckysolo@gmail.com>
  */
 namespace Good\Gd\Codec;
 use Good\Gd\Codec;
 /**
- *  Good 1.0
- *
+ *  The bmp class codec
+ * 
  * @author franckysolo <franckysolo@gmail.com>
  * @since 25 sept. 2012
- * @license license.txt
+ * @license 
  * @category Good 
- * @package Good_Gd
- * @subpackage Codec
- * @filesource Bmp.php
+ * @package Good\Gd\Codec
+ * @subpackage 
  * @version $Id: $
- * @desc : the bmp class codec
+ * @desc : 
  */
 final class Bmp extends Codec
 {
