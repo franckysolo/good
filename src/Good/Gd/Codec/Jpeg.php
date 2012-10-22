@@ -13,7 +13,7 @@ use Good\Gd\Codec\Jpg;
  * @since 26 sept. 2012
  * @license license.txt
  * @category Good 
- * @package Gd
+ * @package Good\Gd
  * @subpackage Codec
  * @filesource Jpeg.php
  * @version $Id: $

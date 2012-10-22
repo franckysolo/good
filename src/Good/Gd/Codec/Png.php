@@ -13,7 +13,7 @@ use Good\Gd\Codec;
  * @since 26 sept. 2012
  * @license license.txt
  * @category Good 
- * @package Gd
+ * @package Good\Gd
  * @subpackage Codec
  * @filesource Png.php
  * @version $Id: $

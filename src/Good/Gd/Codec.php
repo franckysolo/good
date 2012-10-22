@@ -12,8 +12,8 @@ namespace Good\Gd;
  * @since 25 sept. 2012
  * @license license.txt
  * @category Good 
- * @package Gd
- * @subpackage 
+ * @package Good
+ * @subpackage Gd
  * @filesource Codec.php
  * @version $Id: $
  * @desc : The codec abstract class factory
@@ -56,7 +56,7 @@ abstract class Codec
 	/**
      * Create an instance of named codec
      * 
-	 * @param string $codec
+	 * @param string $name
 	 * @param array $options
 	 * @throws \InvalidArgumentException
 	 * @return Codec
@@ -115,7 +115,7 @@ abstract class Codec
 	 * Encode a gd resource in a file image
 	 *
 	 * @access public
-	 * @param gd $resource
+	 * @param gd resource $resource
 	 * @param string $filename
 	 * @return void
 	 */

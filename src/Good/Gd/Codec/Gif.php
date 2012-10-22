@@ -13,7 +13,7 @@ use Good\Gd\Codec;
  * @since 25 sept. 2012
  * @license license.txt
  * @category Good
- * @package Gd
+ * @package Good\Gd
  * @subpackage Codec
  * @filesource Gif.php
  * @version $Id: $

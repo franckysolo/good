@@ -13,7 +13,7 @@ use Good\Gd\Codec;
  * @since 25 sept. 2012
  * @license license.txt
  * @category Good 
- * @package Gd
+ * @package Good\Gd
  * @subpackage Codec
  * @filesource Bmp.php
  * @version $Id: $
@@ -23,6 +23,7 @@ final class Bmp extends Codec
 {
 	/**
 	 * (non-PHPdoc)
+	 * @{@inheritdoc }
 	 * @see Good\Gd.Codec::encode()
 	 */
 	public function encode($resource, $filename)
@@ -34,6 +35,7 @@ final class Bmp extends Codec
 
 	/**
 	 * (non-PHPdoc)
+	 * @{@inheritdoc }
 	 * @see Good\Gd.Codec::getName()
 	 */
 	public function getName($includeDot = false)
@@ -43,6 +45,7 @@ final class Bmp extends Codec
 
 	/**
 	 * (non-PHPdoc)
+	 * @{@inheritdoc }
 	 * @see Good\Gd.Codec::getMimeType()
 	 */
 	public function getMimeType()
