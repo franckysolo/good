@@ -19,17 +19,11 @@ namespace Good\Gd;
  * @desc : 
  */
 abstract class Filter
-{
+{	
 	/**
-	 * Apply a filter to layer
+	 * Returns the name of filter
 	 * 
 	 * @access public
-	 * @param gd resource $resource
-	 */
-	abstract public function apply($resource);
-	
-	/**
-	 * 
 	 * @return string
 	 */
 	public function getName()
@@ -39,4 +33,13 @@ abstract class Filter
 		$cs = strlen($className);
 		return ltrim(substr($className, $nc, $cs - $nc), '\\');
 	}
+	
+	/**
+	 * Apply a filter to layer
+	 *
+	 * @access public
+	 * @param gd resource $resource
+	 * @return void
+	 */
+	abstract public function apply($resource);
 }

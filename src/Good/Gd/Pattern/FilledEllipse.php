@@ -15,8 +15,8 @@ use Good\Gd\Pattern;
  * @license license.txt
  * @category Good 
  * @package Gd
- * @subpackage FilledPattern
- * @filesource Ellipse.php
+ * @subpackage Pattern
+ * @filesource FilledPEllipse.php
  * @version $Id: $
  * @desc : the filled ellipse pattern class
  */
