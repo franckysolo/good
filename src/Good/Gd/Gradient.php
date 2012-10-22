@@ -13,8 +13,8 @@ use Good\Gd\Color;
  * @since 5 oct. 2012
  * @license license.txt
  * @category Good 
- * @package Gd
- * @subpackage
+ * @package Good
+ * @subpackage Gd
  * @filesource Gradient.php
  * @version $Id: $
  * @desc : the gradient abstract class

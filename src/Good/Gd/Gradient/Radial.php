@@ -14,7 +14,7 @@ use Good\Gd\Gradient;
  * @since 22 oct. 2012
  * @license license.txt
  * @category Good
- * @package Gd
+ * @package Good\Gd
  * @subpackage Gradient
  * @filesource Radial.php
  * @version $Id: $
@@ -23,7 +23,9 @@ use Good\Gd\Gradient;
 class Radial extends Gradient
 {
 	/**
+	 * Create a new radial gradient
 	 * 
+	 * @access public
 	 * @param Pattern $pattern
 	 */
 	public function __construct(Pattern $pattern)

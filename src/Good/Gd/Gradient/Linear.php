@@ -24,18 +24,23 @@ use Good\Gd\Gradient;
 class Linear extends Gradient
 {
 	/**
+	 * The gradient linear vertical direction
 	 * 
-	 * @var unknown_type
+	 * @access public
+	 * @var string
 	 */
 	const VERTICAL = 'vertical';
 	
 	/**
+	 * The gradient linear horizontal direction
 	 * 
-	 * @var unknown_type
+	 * @access public
+	 * @var string
 	 */
 	const HORIZONTAL = 'horizontal';
 	
 	/**
+	 * Create a new linear gradient
 	 * 
 	 * @param FilledRectangle $pattern
 	 * @param string $style
@@ -77,6 +82,13 @@ class Linear extends Gradient
 		return array($xmin, $xmax, $ymin, $ymax, $max);
 	}
 	
+	/**
+	 * Calculate the points values
+	 * 
+	 * @param integer $i
+	 * @param integer $j
+	 * @return array
+	 */
 	public function calculate($i, $j)
 	{
 		switch($this->_style) {
