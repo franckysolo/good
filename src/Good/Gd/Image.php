@@ -146,7 +146,7 @@ class Image
 	 * 
 	 * @access public
 	 * @param string $name
-	 * @param Resource $resource
+	 * @param \Good\Gd\Resource $resource
 	 * @throws \BadMethodCallException
 	 * @return \Good\Gd\Layer
 	 */

@@ -21,7 +21,11 @@ use Good\Gd\Codec;
  */
 final class Bmp extends Codec
 {
-	
+	/**
+	 * (non-PHPdoc)
+	 * 
+	 * @see Good\Gd.Codec::encode($resource, $filename)
+	 */
 	public function encode($resource, $filename)
 	{
 		if(!image2wbmp($resource, $filename)){
@@ -32,8 +36,7 @@ final class Bmp extends Codec
 	/**
 	 * (non-PHPdoc)
 	 * 
-	 * @param boolean $includeDot
-	 * @see Good\Gd.Codec::getName()
+	 * @see Good\Gd.Codec::getName($includeDot)
 	 */
 	public function getName($includeDot = false)
 	{
@@ -41,10 +44,9 @@ final class Bmp extends Codec
 	}
 
 	/**
-	 * Returns the mime-type bmp
+	 * (non-PHPdoc)
 	 * 
-	 * @access public
-	 * @return string
+	 * @see Good\Gd.Codec::getMimeType()
 	 */
 	public function getMimeType()
 	{
