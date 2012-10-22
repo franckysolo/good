@@ -6,8 +6,10 @@
  */
 namespace Good\Core;
 /**
- *  Good 1.0 - The View class
- *
+ *  Good 1.0
+ *  
+ *  The View class
+ *  
  * @author franckysolo <franckysolo@gmail.com>
  * @since 20 oct. 2012
  * @license license.txt

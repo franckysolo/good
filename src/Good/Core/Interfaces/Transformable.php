@@ -12,8 +12,8 @@ namespace Good\Core\Interfaces;
  * @since 20 oct. 2012
  * @license license.txt
  * @category Good 
- * @package
- * @subpackage
+ * @package Core
+ * @subpackage Interfaces
  * @filesource Transformable.php
  * @version $Id: $
  * @desc : 
