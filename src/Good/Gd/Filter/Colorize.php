@@ -57,7 +57,9 @@ class Colorize extends Filter
 	}
 	
 	/**
-	 * (non-PHPdoc)
+	 * Apply colorize filter
+	 * 
+	 * @param gd resource $resource
 	 * @see Good\Gd.Filter::apply()
 	 */
 	public function apply($resource)

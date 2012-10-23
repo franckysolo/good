@@ -21,7 +21,9 @@ use Good\Gd\Filter;
 class Grayscale extends Filter
 {
 	/**
-	 * (non-PHPdoc)
+	 * Apply Grayscale filter
+	 * 
+	 * @param gd resource $resource
 	 * @see Good\Gd.Filter::apply()
 	 */
 	public function apply($resource)

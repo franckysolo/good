@@ -21,7 +21,9 @@ use Good\Gd\Filter;
 class Edge extends Filter
 {
 	/**
-	 * (non-PHPdoc)
+	 * Apply edge filter
+	 * 
+	 * @param gd resource $resource
 	 * @see Good\Gd.Filter::apply()
 	 */
 	public function apply($resource)

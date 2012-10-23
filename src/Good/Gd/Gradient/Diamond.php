@@ -16,7 +16,7 @@ use Good\Gd\Gradient;
  * @since 22 oct. 2012
  * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
  * @category Good
- * @package Gd
+ * @package Good\Gd
  * @subpackage Gradient
  */
 class Diamond extends Diagonal

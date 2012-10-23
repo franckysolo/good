@@ -18,7 +18,7 @@ use Good\Gd\Pattern\Fractal;
  * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
  * @category Good 
  * @package Good\Gd\Pattern
- * @subpackage Fratctal
+ * @subpackage Fractal
  * @desc :
  * <pre>
  *  définir x1 = -1

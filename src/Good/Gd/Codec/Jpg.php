@@ -6,6 +6,7 @@
  * @author franckysolo <franckysolo@gmail.com>
  */
 namespace Good\Gd\Codec;
+use Good\Gd\Codec\Interfaces\Encodable;
 use Good\Gd\Codec;
 /**
  *  The jpg  class codec
@@ -18,7 +19,7 @@ use Good\Gd\Codec;
  * @package Good\Gd
  * @subpackage Codec
  */
-class Jpg extends Codec
+class Jpg extends Decoder implements Encodable
 {
 	/**
 	 * The jpeg quality
@@ -69,8 +70,11 @@ class Jpg extends Codec
 	}
 	
 	/**
-	 * (non-PHPdoc)
-	 * @see Good\Gd.Codec::encode()
+	 * Encode gd resource in jpg format
+	 * 
+	 * @param gd resource $resource
+	 * @param string $filename
+	 * @see Good\Gd\Codec\Interfaces.Encodable::encode()
 	 */
 	public function encode($resource, $filename)
 	{
@@ -80,8 +84,10 @@ class Jpg extends Codec
 	}
 	
 	/**
-	 * (non-PHPdoc)
-	 * @see Good\Gd.Codec::getName()
+	 * Returns extension string name
+	 * 
+	 * @param boolean $includeDot
+	 * @see Good\Gd\Codec\Interfaces.Encodable::getName()
 	 */
 	public function getName($includeDot = false)
 	{
@@ -89,8 +95,9 @@ class Jpg extends Codec
 	}
 	
 	/**
-	 * (non-PHPdoc)
-	 * @see Good\Gd.Codec::getMimeType()
+	 * Returns mime-type string name
+	 * 
+	 * @see Good\Gd\Codec\Interfaces.Encodable::getMimeType()
 	 */
 	public function getMimeType()
 	{

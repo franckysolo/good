@@ -25,7 +25,7 @@ abstract class Codec
 	 * @access public
 	 * @var string
 	 */
-	const PNG = 'image/png';
+	 const PNG = 'image/png';
 	 
 	/**
 	 * GIF codec
@@ -50,8 +50,7 @@ abstract class Codec
      * @var string
      */
     const BMP = 'image/bmp';
-
-    
+   
 	/**
      * Create an instance of named codec
      * 
@@ -89,51 +88,4 @@ abstract class Codec
 		 
 		return  ucfirst($name);
 	}
-	
-	/**
-	 * Decode the image and create a gd resource
-	 *
-	 * @access public
-	 * @param string $filename
-	 * @throws \InvalidArgumentException
-	 * @return gd resource
-	 */
-	public function decode($filename)
-	{
-		if(!file_exists($filename)) {
-			$message = sprintf('File %s does not exist', $filename);
-			throw new \InvalidArgumentException($message, 404);
-		}
-		
-		$data =  file_get_contents($filename);
-		
-		return imagecreatefromstring($data);
-	}
-	
-	/**
-	 * Encode a gd resource in a file image
-	 *
-	 * @access public
-	 * @param gd resource $resource
-	 * @param string $filename
-	 * @return void
-	 */
-	abstract public function encode($resource, $filename);
-	
-	/**
-	 * Get the codec name
-	 * 
-	 * @param boolean $includeDot
-	 * @access public
-	 * @return string
-	 */
-	abstract public function getName($includeDot);
-	
-	/**
-	 * Get the mime type
-	 *
-	 * @access public
-	 * @return string
-	 */
-	abstract public function getMimeType();
 }

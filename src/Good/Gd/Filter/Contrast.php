@@ -59,7 +59,9 @@ class Contrast extends Filter
 	}
 
 	/**
-	 * (non-PHPdoc)
+	 * Apply contsrast filter
+	 * 
+	 * @param gd resource $resource
 	 * @see Good\Gd.Filter::apply()
 	 */
 	public function apply($resource)

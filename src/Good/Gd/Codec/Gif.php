@@ -6,6 +6,7 @@
  * @author franckysolo <franckysolo@gmail.com>
  */
 namespace Good\Gd\Codec;
+use Good\Gd\Codec\Interfaces\Encodable;
 use Good\Gd\Codec;
 /**
  *  The gif codec class
@@ -18,11 +19,14 @@ use Good\Gd\Codec;
  * @package Good\Gd
  * @subpackage Codec
  */
-final class Gif extends Codec
+final class Gif extends Decoder implements Encodable
 {
 	/**
-	 * (non-PHPdoc)
-	 * @see Good\Gd.Codec::encode()
+	 * Encode gd resource in gif format
+	 * 
+	 * @param gd resource $resource
+	 * @param string $filename
+	 * @see Good\Gd\Codec\Interfaces.Encodable::encode()
 	 */
 	public function encode($resource, $filename)
 	{
@@ -32,8 +36,10 @@ final class Gif extends Codec
 	}
 
 	/**
-	 * (non-PHPdoc)
-	 * @see Good\Gd.Codec::getName()
+	 * Returns extension string name
+	 * 
+	 * @param boolean $includeDot
+	 * @see Good\Gd\Codec\Interfaces.Encodable::getName()
 	 */
 	public function getName($includeDot = false)
 	{
@@ -41,8 +47,10 @@ final class Gif extends Codec
 	}
 
 	/**
-	 * (non-PHPdoc)
+	 * Returns mime-type string name
+	 * 
 	 * @see Good\Gd.Codec::getMimeType()
+	 * @see Good\Gd\Codec\Interfaces.Encodable::getMimeType()
 	 */
 	public function getMimeType()
 	{

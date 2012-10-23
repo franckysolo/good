@@ -21,7 +21,9 @@ use Good\Gd\Filter;
 class Negate extends Filter
 {
 	/**
-	 * (non-PHPdoc)
+	 * Apply negate filter
+	 * 
+	 * @param gd resource $resource
 	 * @see Good\Gd.Filter::apply()
 	 */
 	public function apply($resource)

@@ -15,7 +15,7 @@ namespace Good\Gd;
  * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
  * @category Good 
  * @package Good
- * @subpackage  Gd 
+ * @subpackage Gd 
  */
 class LayerList implements \Countable
 {

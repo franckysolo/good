@@ -6,6 +6,7 @@
  * @author franckysolo <franckysolo@gmail.com>
  */
 namespace Good\Gd\Codec;
+use Good\Gd\Codec\Interfaces\Encodable;
 use Good\Gd\Codec;
 /**
  *  The bmp class codec
@@ -15,15 +16,17 @@ use Good\Gd\Codec;
  * @since 25 sept. 2012
  * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
  * @category Good 
- * @package Good\Gd\Codec
- * @subpackage 
+ * @package Good\Gd
+ * @subpackage Codec
  */
-final class Bmp extends Codec
+final class Bmp extends Decoder implements Encodable
 {
-
 	/**
-	 * (non-PHPdoc)
-	 * @see Good\Gd.Codec::encode()
+	 * Encode gd resource in bmp format
+	 * 
+	 * @param gd resource $resource
+	 * @param string $filename
+	 * @see Good\Gd\Codec\Interfaces.Encodable::encode()
 	 */
 	public function encode($resource, $filename)
 	{
@@ -33,8 +36,10 @@ final class Bmp extends Codec
 	}
 
 	/**
-	 * @{inheritdoc}
-	 * @see Good\Gd.Codec::getName($includeDot)
+	 * Returns extension string name
+	 * 
+	 * @param boolean $includeDot
+	 * @see Good\Gd\Codec\Interfaces.Encodable::getName()
 	 */
 	public function getName($includeDot = false)
 	{
@@ -42,9 +47,10 @@ final class Bmp extends Codec
 	}
 
 	/**
-	 * (non-PHPdoc)
+	 * Returns mime-type string name
 	 * 
 	 * @see Good\Gd.Codec::getMimeType()
+	 * @see Good\Gd\Codec\Interfaces.Encodable::getMimeType()
 	 */
 	public function getMimeType()
 	{

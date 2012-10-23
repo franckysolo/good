@@ -16,5 +16,6 @@ use Good\Gd\Codec\Jpg;
  * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
  * @category Good 
  * @package Good\Gd
+ * @subpackage Codec
  */
 final class Jpeg extends Jpg {}

@@ -21,7 +21,9 @@ use Good\Gd\Filter;
 class SelectiveBlur extends Filter
 {
 	/**
-	 * (non-PHPdoc)
+	 * Apply selective blur filter
+	 * 
+	 * @param gd resource $resource
 	 * @see Good\Gd.Filter::apply()
 	 */
 	public function apply($resource)

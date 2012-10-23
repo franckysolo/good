@@ -15,7 +15,7 @@ namespace Good\Core;
  * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
  * @category Good 
  * @package Good
- * @subpackage Core
+ * @subpackage Core 
  */
 class View
 {
@@ -87,8 +87,8 @@ class View
 	}
 	
 	/**
+	 * Returns undefined parameter
 	 * 
-	 * @method __get
 	 * @param string $name
 	 * @throws \InvalidArgumentException
 	 * @return mixed

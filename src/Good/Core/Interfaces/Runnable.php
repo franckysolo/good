@@ -13,7 +13,7 @@ namespace Good\Core\Interfaces;
  * @author franckysolo <franckysolo@gmail.com>
  * @since 25 sept. 2012
  * @license http://creativecommons.org/licenses/by-sa/3.0/  CC BY-SA 3.0
- * @category Good 
+ * @category  Good
  * @package Good\Core
  * @subpackage Interfaces
  */

@@ -21,7 +21,9 @@ use Good\Gd\Filter;
 class Emboss extends Filter
 {
 	/**
-	 * (non-PHPdoc)
+	 * Apply Emboss filter
+	 * 
+	 * @param gd resource $resource
 	 * @see Good\Gd.Filter::apply()
 	 */
 	public function apply($resource)
