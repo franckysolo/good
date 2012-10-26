@@ -93,9 +93,10 @@ class Palette
 	 * @access public
 	 * @param integer $numberOfColor
 	 * @param boolean $randomAlpha
+	 * @param boolean $numericKey
 	 * @return array  
 	 */
-	public function randomColor($numberOfColor, $randomAlpha = false)
+	public function randomColor($numberOfColor, $randomAlpha = false, $numericKey = true)
 	{
 		$colors = array();
 	
@@ -111,7 +112,7 @@ class Palette
 				array_push($color, $alpha);
 			}
 						
-			$key = $this->rgbaToHtml($color);
+			$key = $numericKey ? $i : $this->rgbaToHtml($color);
 			$colors[$key] = $color;		
 		}
 		
