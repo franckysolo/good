@@ -7,6 +7,8 @@ use Good\Gd\Pattern\DashedLine;
 use Good\Gd\Pattern\Line;
 
 use Good\Chart\Util\Spacing;
+use Good\Chart\Element\Tick;
+use Good\Chart\Element\Grid;
 
 use Good\Gd\Color\Palette;
 
@@ -29,7 +31,7 @@ class Pie extends Plot
 	 * @access protected
 	 * @var boolean
 	 */
-	protected $_isFilled = false;
+	protected $_isFilled = true;
 	
 	/**
 	 *
@@ -52,7 +54,7 @@ class Pie extends Plot
 	 * @access protected
 	 * @var string
 	 */
-	protected $_style = 'dashed';
+	protected $_style = 'none';
 	
 	/**
 	 * (non-PHPdoc)
@@ -62,8 +64,13 @@ class Pie extends Plot
 	{	
 		$this->_spacing = new Spacing(50, 50, 50, 50);
 		
+		
 		$xo = $w = imagesx($this->_resource) / 2;
 		$yo = $h = imagesy($this->_resource) / 2;
+		
+		$this->grid = new Grid($this->_resource);
+		$this->grid->setCoordinates($this->getPosition())
+					->setColor(Palette::WHITE);
 	
 		$this->setOrigin($xo, $yo);
 	
@@ -96,6 +103,11 @@ class Pie extends Plot
 	
 	public function draw()
 	{
+		foreach ($this->_elements as $element) {
+			if($element instanceof Drawable) {
+				$element->draw();
+			}
+		}
 		$m = $this->_spacing;
 		$datay = $this->_data->getDatay();
 		$sum = $this->_data->ysum();
@@ -135,21 +147,21 @@ class Pie extends Plot
 				
 			$line->setCoordinates($x1, $y1, $vx , $vy)->setColor($color[$key])->draw();
 				
-// 			if(isset($this->_labelValues[$key])) {
+			if(isset($this->_labels[$key])) {
 					
-// 				$coef = ($this->_labelPosition == Tick::IN) ? 0.5 : 1.1;
-// 				$anglex = cos(deg2rad($angles  + $angle / 2)) * $coef;
-// 				$angley = sin(deg2rad($angles  + $angle / 2)) * $coef;
+				$coef = ($this->_labelPosition == Tick::IN) ? 0.8 : 1.1;
+				$anglex = cos(deg2rad($angles  + $angle / 2)) * $coef;
+				$angley = sin(deg2rad($angles  + $angle / 2)) * $coef;
 		
-// 				$tx = ($this->_radius  / $this->_offset)  * $anglex + $x1;
-// 				$ty = ($this->_radius  / $this->_offset)  * $angley + $y1;
-// 				$ty += 10;
-		
-// 				$this->_labelValues[$key]->setPoints($tx,  $ty);
-// 				$this->_labelValues[$key]->execute();
-// 				//Debug
-// 				//$driver->line($x1, $y1, $tx , $ty, $red);
-// 			}
+				$tx = ($this->_radius  / $this->_offset)  * $anglex + $x1;
+				$ty = ($this->_radius  / $this->_offset)  * $angley + $y1;
+				$ty += 5;
+				$col = $this->_labelPosition == Tick::IN ? new Color() : $color[$key];
+				$this->_labels[$key]->setCoordinates($tx,  $ty)
+									->setColor($col)
+									->setSize(10)
+									->draw();
+			}
 				
 			$angles += $angle;
 		}
