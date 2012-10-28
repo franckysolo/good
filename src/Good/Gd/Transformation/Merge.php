@@ -51,6 +51,7 @@ class Merge extends Transformation
 	 */	
 	public function execute()
 	{
+		//@todo resource du contructeur non utilisé choisir une alternative!!!
  		$source = $this->_layerList->get(0);
  		$this->_layerList->remove(0);
 		
@@ -88,7 +89,9 @@ class Merge extends Transformation
 		
 // 		$color 	= imagecolorat($rc, 0, 0);
 //		imagecolortransparent($rc, $color);
-		
+
+		//@todo expoilter les valeurs dstx dsty srcx scry pour  fusion plus souple
+		//cf add layer position x et y
 		if(!imagecopymerge ($rc, $rs, 0, 0, 0, 0, $x, $y, $transparence)) {
 			throw new \RuntimeException('Unable to merge layers', 500);
 		}

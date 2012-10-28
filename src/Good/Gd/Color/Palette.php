@@ -30,7 +30,7 @@ class Palette
 	const LIGHTGRAY 	= 0xececec;
 	const DARKGRAY 		= 0x666666;
 	const SILVER 		= 0xc0c0c0;
-	const GRAY 			= 0x999999;
+	const GRAY 			= 0xcccccc;
 	const MAROON		= 0x800000;
 	const BLUE 			= 0x0000ff;	
 	const PURPLE 		= 0x800080;

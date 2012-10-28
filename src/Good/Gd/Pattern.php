@@ -47,6 +47,14 @@ abstract class Pattern implements Drawable
 	protected $_coordinates = array();
 	
 	/**
+	 * The pattern visibility (hide | show)
+	 * 
+	 * @access protected
+	 * @var boolean
+	 */
+	protected $_visible = true;
+	
+	/**
 	 * Create a new pattern
 	 * 
 	 * @access public

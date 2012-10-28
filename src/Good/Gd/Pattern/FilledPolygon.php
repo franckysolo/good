@@ -18,7 +18,7 @@ use Good\Gd\Pattern;
  * @package Good\Gd
  * @subpackage Pattern
  */
-class FilledPolygon extends Pattern 
+class FilledPolygon extends FilledRectangle 
 {
 	/**
 	 * (non-PHPdoc)
@@ -32,6 +32,10 @@ class FilledPolygon extends Pattern
 		if(!imagefilledpolygon($this->_resource, $coords, $number, $this->getColor())) {
 			$message = 'Unable to draw filled polygon';
 			throw new \RuntimeException($message, 500);
+		}
+		
+		if(null != $this->_gradient) {
+			$this->_gradient->apply();
 		}
 	}
 }

@@ -63,14 +63,14 @@ class Linear extends Gradient
 		if($this->_style == self::HORIZONTAL) {
 			$xmin = $x1;
 			$ymin = $y1;
-			$xmax = $x2;
-			$ymax = $y2;
+			$xmax = $x2 + 1;
+			$ymax = $y2 + 1;
 			
 		} else if ($this->_style == self::VERTICAL) {
 			$xmin = $y1;
 			$ymin = $x1;
-			$xmax = $y2;
-			$ymax = $x2;			
+			$xmax = $y2 + 1;
+			$ymax = $x2 + 1;			
 		} 
 		
 		$dx = $xmax - $xmin;
@@ -93,8 +93,8 @@ class Linear extends Gradient
 		switch($this->_style) {
 			
 			case self::VERTICAL:
-				$x = $i;
-				$y = $j;
+				$x = $j;
+				$y = $i;
 			break;
 				
 			case self::HORIZONTAL:
@@ -123,7 +123,7 @@ class Linear extends Gradient
 
 		for ($i = $xmin; $i <= $xmax; $i++) {
 			for ($j = $ymin; $j <= $ymax; $j++) {	
-				$offset = $max + $j + $i;
+				$offset = $max + ($j + $i);
 				list($x, $y) = $this->calculate($i, $j);
 				$color = $this->interpolate($image, $index, $offset);
 				imagesetpixel($image, $x, $y, $color);				
