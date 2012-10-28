@@ -74,8 +74,10 @@ class Data implements \Countable
 	 */
 	public function xRange()
 	{
-		return $this->xmax() + 1;
+		$min = ($this->xmin() > 0) ? 0 : ($this->xmin() < 0) ? $this->xmin() : $this->xmin() - 1;
+		return $this->xmax() - $min;
 	}
+	
 	/**
 	 *
 	 * Enter description here ...
@@ -84,7 +86,12 @@ class Data implements \Countable
 	public function yRange()
 	{
 		$min = ($this->ymin() > 0) ? 0 : $this->ymin();
-		return $this->ymax() - $min + 1;
+		return $this->ymax() - $min;
+// 		if($this->xmin() < 0) {
+// 			return $this->xmax() + $this->xmin() - 1;
+// 		}
+// 		return $this->xmax() + $this->xmin() + 1;
+//		return abs($this->ymin()) + abs($this->ymax()); 
 	}
 	/**
 	 *

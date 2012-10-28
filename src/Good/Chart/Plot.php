@@ -1,6 +1,9 @@
 <?php
 namespace Good\Chart;
 
+use Good\Chart\Element\Label;
+use Good\Chart\Element\Tick;
+
 use Good\Gd\Color;
 
 use Good\Gd\Color\Palette;
@@ -40,6 +43,22 @@ abstract class Plot implements Drawable
 	protected $_data;
 	
 	/**
+	 * The label chart data values
+	 * 
+	 * @access protected
+	 * @var array
+	 */
+	protected $_labels = array();
+	
+	/**
+	 * The label chart data position
+	 * 
+	 * @access protected
+	 * @var string
+	 */
+	protected  $_labelPosition = Tick::OUT;
+	
+	/**
 	 * 
 	 * @access protected
 	 * @var Spacing
@@ -60,7 +79,7 @@ abstract class Plot implements Drawable
 	 * @access protected
 	 * @var mixed
 	 */
-	protected $_scalex, $_scaley;
+	protected $_xscale, $_yscale;
 	
 	/**
 	 * The color of plot
@@ -78,15 +97,11 @@ abstract class Plot implements Drawable
 	 */
 	protected $_elements = array();
 	
-	/**
-	 * 
-	 * @param gd resource $resource
-	 * @param string $name
-	 */
-	public function __construct($resource, $name = 'plot-graph')
+	
+	public function __construct(Chart $graph, $name = 'plot-graph')
 	{
 		$this->_name = $name;
-		$this->_resource = $resource;
+		$this->_resource = $graph->getLayer()->getResource();
 	}
 	
 	public function init()
@@ -96,24 +111,39 @@ abstract class Plot implements Drawable
 		
 		$this->grid = new Grid($this->_resource);
 		$this->grid->setCoordinates($this->getPosition())
-				    ->setColor(Palette::WHITE);
+				   ->setColor(Palette::WHITE);
 	
 		$this->axisx = new Axis($this->_resource);
 		$this->axisy = new Axis($this->_resource);
 		
+		$this->setXscale();
+		$this->setYscale();
+		
+		$this->grid->setScale($this->_xscale, $this->_yscale);
+		
 		$posx = $this->setAxisX($data->ymin(), $data->ymax());
 		$posy = $this->setAxisY($data->xmin(), $data->xmax());
-	
+		
 		$this->setOrigin();
+		
+		$this->grid->setOrigin($this->_origin);
+		
+		$this->axisx->addTick(Tick::X, $this->getXscale());
+		$this->axisx->tickx->setOrigin($this->_origin);
+		
+ 		$this->axisy->addTick(Tick::Y, $this->getYscale());
+ 		$this->axisy->ticky->setOrigin($this->_origin);
 	}
 	
 	public function setColor($color)
 	{
 		if(is_array($color)) {
-			//@todo
-		} else {
-			$this->_color = $color instanceof Color ? $color : new Color($color);
-		}
+			if(is_array($color[0])){
+				
+			}
+		} 
+		$this->_color = $color instanceof Color ? $color : new Color($color);
+		return $this;
 	}
 	
 	
@@ -170,10 +200,11 @@ abstract class Plot implements Drawable
 	{
 		list($x1, $y1, $x2, $y2) = $this->getPosition();
 		$position = $this->axisXPosition($min, $max);
-	
+		$m = $this->_spacing;
 		switch ($position) {
 			case Position::TOP:
 				$this->axisx->setCoordinates($x1, $y1, $x2, $y1);
+				
 				break;
 	
 			case Position::BOTTOM:
@@ -182,7 +213,7 @@ abstract class Plot implements Drawable
 				break;
 	
 			case Position::ABSOLUTE:
-				$y =  ($this->_data->ymin() * $this->getYscale())  + $y2;
+				$y = $y2 - (abs($this->_data->ymin()) * $this->getYscale());
 				$this->axisx->setCoordinates($x1, $y, $x2, $y);
 	
 				break;
@@ -218,7 +249,7 @@ abstract class Plot implements Drawable
 	 */
 	public function setXscale()
 	{
-		$maxLength = imagesx($this->_resource) - $this->_margin->getHorizontal();
+		$maxLength = imagesx($this->_resource) - $this->_spacing->getHorizontal();
 		$this->_xscale = ($maxLength / $this->_data->xRange());
 		return $this;
 	}
@@ -242,8 +273,8 @@ abstract class Plot implements Drawable
 	 */
 	public function setYscale()
 	{
-		$maxLength = imagesy($this->_resource) - $this->_margin->getVertical();
-		$this->_yscale = ($maxLength / $this->getSerie(0)->yRange());
+		$maxLength = imagesy($this->_resource) - $this->_spacing->getVertical();
+		$this->_yscale = ($maxLength / $this->_data->yRange());
 		return $this;
 	}
 	
@@ -268,11 +299,11 @@ abstract class Plot implements Drawable
 	{
 		list($x1, $y1, $x2, $y2) = $this->getPosition();
 		$position = $this->axisYPosition($min, $max);
+		$m = $this->_spacing;
 		switch ($position)
 		{
 			case Position::LEFT:
-				$this->axisy->setCoordinates($x1, $y1, $x1, $y2);
-	
+				$this->axisy->setCoordinates($x1, $y1, $x1, $y2);				
 				break;
 	
 			case Position::RIGHT:
@@ -280,8 +311,17 @@ abstract class Plot implements Drawable
 	
 				break;
 	
-			case Position::ABSOLUTE:
-				$x = $x2 -  ($this->getSerie(0)->xmax() * $this->_xscale);
+			case Position::ABSOLUTE: 
+// 				var_dump($this->_data->xmin(), $this->_data->xmax(),  $this->getXscale());
+// 				die;
+// 				$min = $this->_data->xmin() < 0 ? abs($this->_data->xmin()) : $this->_data->xmax(); 
+// 				$x = ($x2 - $x1) + ($min * $this->getXscale());
+				$unit = $this->_data->xmax() - $this->_data->xmin();
+				$x = ($unit * $this->_data->count()) ;
+				$x = $x1 - ($this->_data->xmin() * $this->getXscale());
+				//$x =  $mx * $this->getXscale() / $this->_data->xRange();
+				//var_dump($x, $unit, $this->getXscale()); die;
+				//$x = ($mx * $this->getXscale()) - $x1 - $x2;
 				$this->axisy->setCoordinates($x, $y1, $x, $y2);
 				break;
 		}
@@ -356,6 +396,78 @@ abstract class Plot implements Drawable
 	public function getElements()
 	{
 		return $this->_elements;
+	}
+	
+	/**
+	 * Set the labels position could be IN or OUT
+	 * 
+	 * @access public
+	 * @param string $position
+	 * @return \Good\Chart\Plot
+	 */
+	public function setLabelPosition($position = Tick::IN)
+	{
+		// @todo set size, unity parameters
+		$this->_labelPosition = $position;
+		return $this;
+	}
+	
+	/**
+	 * Set the labels text values if $texts is empty
+	 * labels value will be replace by data value
+	 * @todo test litteral values
+	 * @access public
+	 * @param array $labels
+	 * @throws \Exception
+	 */
+	public function setLabels(array $labels = array())
+	{
+		$datay = $this->_data->getDatay();
+		if(empty($labels)) {
+			$labels = $datay;
+		}
+	
+		$max =  $this->_data->count();
+		$count = count($labels);
+	
+		if($count != $max){
+			$message = sprintf('%s count values expected for labels text', $count);
+			throw new \OutOfRangeException($message, 500);
+		}
+	
+		foreach ($labels as $name => $text) {
+			$this->_labels[$name] = new Label($this->_resource);
+			$this->_labels[$name]->setText($text);
+		}
+	
+		return $this;
+	}
+	
+	/**
+	 * Returns a label value by his name
+	 *
+	 * @access public
+	 * @param string $name
+	 * @return string
+	 */
+	public function getLabel($name)
+	{
+		if(isset($this->_labels[$name])){
+			return $this->_labels[$name];
+		}
+	
+		return '';
+	}
+	
+	/**
+	 * Returns labels values array
+	 *
+	 * @access public
+	 * @return array
+	 */
+	public function getLabels()
+	{
+		return $this->_labels;
 	}
 	
 	/**
