@@ -40,13 +40,13 @@ class Label extends Text
 		$this->_spacing = new Spacing();
 	}
 	
-	public function setHorizontalAlignement($alignement)
+	public function setHorizontalAlignment($alignement)
 	{
 		$this->_hAlign = $alignement;
 		return $this;
 	}	
 	
-	public function setVerticalAlignement($alignement)
+	public function setVerticalAlignment($alignement)
 	{
 		$this->_vAlign = $alignement;
 		return $this;
