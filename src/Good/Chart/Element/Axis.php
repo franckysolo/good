@@ -6,14 +6,13 @@ class Axis extends Line
 {
 	protected $_elements = array();
 	protected $_coordinates = array(0 ,0, 0, 0);
-	
-	/**
-	 * The axis label
-	 *
-	 * @access protected
-	 * @var Label
-	 */
-	protected $_label;
+
+	public function addTick($name, $scale, $interval = 1)
+	{
+		$this->$name = new Tick($this->_resource);	
+		$this->$name->init($this, $scale, $interval);	
+		return $this;
+	}
 	
 	/**
 	 * Set the axis label
@@ -21,21 +20,21 @@ class Axis extends Line
 	 * @access public
 	 * @param Label $label
 	 */
-	public function setLabel(Label $label)
+	public function setLabel($text, $size = 10, $angle = 0)
 	{
-		$this->_label = $label;
+ 		list($x1, $y1, $x2, $y2) = $this->getCoordinates();
+ 		
+		$this->label = new Label($this->_resource);
+ 		$this->label->setText($text)
+ 					->setSize($size)
+ 					->setAngle($angle);
+ 		
+ 		$x = $x2 - $this->label->getTextWidth();
+ 		$y = $y2 - $this->label->getTextHeight();
+ 		
+ 		$this->label->setCoordinates($x, $y);
+ 		
 		return $this;
-	}
-	
-	/**
-	 * Return the axis label
-	 *
-	 * @access public
-	 * @return
-	 */
-	public function getLabel()
-	{
-		return $this->_label;
 	}
 	
 	public function __get($name)
