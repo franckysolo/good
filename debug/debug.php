@@ -13,7 +13,8 @@ $serie = new Serie(array(
 
 	//'tests\Color\PaletteCase',
 	//'tests\Color\ColorCase',
-
+	//'tests\Gradient\GradientCase',
+		
 	//'tests\Fractals\BudhaCase',
 	//'tests\Fractals\JuliaCase',
 	//'tests\Fractals\MandelCase',
@@ -28,9 +29,17 @@ $serie = new Serie(array(
  	//'tests\Transformation\RotationCase',
  	//'tests\Transformation\ComplexRotationCase',
 	//'tests\Transformation\ThumbnailCase',
- 	'tests\Transformation\CropCase',
-//	'tests\Transformation\MergeCase',
-	
+ 	//'tests\Transformation\CropCase',
+	//	'tests\Transformation\MergeCase',
+
+	//dev
+// 	'tests\Chart\BarCase',
+// 	'tests\Chart\PieCase',
+// 	'tests\Chart\StickCase',
+// 	'tests\Chart\MarkCase',
+	'tests\Chart\MathCase',
+	//'tests\Chart\AxisCase',
+		
 ));
 
 View::newInstance()->render($serie->run());
